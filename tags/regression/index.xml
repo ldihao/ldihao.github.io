@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>regression on ldihao&#39;s blog</title>
+    <link>https://ldihao.github.io/tags/regression/</link>
+    <description>Recent content in regression on ldihao&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Feb 2020 15:22:08 +0000</lastBuildDate>
+    
+	<atom:link href="https://ldihao.github.io/tags/regression/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Paper review - [2020AAAI] PSENet Psoriasis Severity Evaluation Network</title>
+      <link>https://ldihao.github.io/2020/02/26/pr-psenet/</link>
+      <pubDate>Wed, 26 Feb 2020 15:22:08 +0000</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/02/26/pr-psenet/</guid>
+      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;use case: 牛皮癣严重级别评估&lt;/li&gt;
+&lt;li&gt;相比传统医师：节省时间、consistency&lt;/li&gt;
+&lt;li&gt;技术上：使用 score refine module （类似attention layer） 提取信息、使用 siamese structure 缓解数据量小的问题、同时结合了 segmentation （bounding box）&lt;/li&gt;
+&lt;li&gt;结果：3.25 -&amp;gt; 2.21 (MAE), 70.72% -&amp;gt; 77.87% (Pair Accurancy)&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

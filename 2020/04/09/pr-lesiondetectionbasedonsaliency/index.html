@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Paper Review - [2018MICCAI] Uniqueness-Driven Saliency Analysis for Automated Lesion Detection with Applications to Retinal Diseases - ldihao&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ldihao" /><meta name="description" content="General  场景：眼底图像上的损伤检测 技术上：  根据显著性目标（saliency）总是相比背景具有独特性（uniqueness）的原理，从每个像素点的颜色和位置方面考虑，得到目标检测结果。 unsupervised model / feature extractor   lesion 分类：  dark lesion：microaneurysms (MA)，Hemorrhages（HM） bright lesion：exudates (EX)，leakage (LK)   这些特征主要影响 Diabetic retinopathy 和 malarial retinopathy 的诊断 " /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
+
+
+<link rel="canonical" href="https://ldihao.github.io/2020/04/09/pr-lesiondetectionbasedonsaliency/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Paper Review - [2018MICCAI] Uniqueness-Driven Saliency Analysis for Automated Lesion Detection with Applications to Retinal Diseases" />
+<meta property="og:description" content="General
+
+场景：眼底图像上的损伤检测
+技术上：
+
+根据显著性目标（saliency）总是相比背景具有独特性（uniqueness）的原理，从每个像素点的颜色和位置方面考虑，得到目标检测结果。
+unsupervised model / feature extractor
+
+
+lesion 分类：
+
+dark lesion：microaneurysms (MA)，Hemorrhages（HM）
+bright lesion：exudates (EX)，leakage (LK)
+
+
+这些特征主要影响 Diabetic retinopathy 和 malarial retinopathy 的诊断
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ldihao.github.io/2020/04/09/pr-lesiondetectionbasedonsaliency/" />
+<meta property="article:published_time" content="2020-04-09T16:40:28+00:00" />
+<meta property="article:modified_time" content="2020-04-09T16:40:28+00:00" />
+<meta itemprop="name" content="Paper Review - [2018MICCAI] Uniqueness-Driven Saliency Analysis for Automated Lesion Detection with Applications to Retinal Diseases">
+<meta itemprop="description" content="General
+
+场景：眼底图像上的损伤检测
+技术上：
+
+根据显著性目标（saliency）总是相比背景具有独特性（uniqueness）的原理，从每个像素点的颜色和位置方面考虑，得到目标检测结果。
+unsupervised model / feature extractor
+
+
+lesion 分类：
+
+dark lesion：microaneurysms (MA)，Hemorrhages（HM）
+bright lesion：exudates (EX)，leakage (LK)
+
+
+这些特征主要影响 Diabetic retinopathy 和 malarial retinopathy 的诊断
+">
+<meta itemprop="datePublished" content="2020-04-09T16:40:28&#43;00:00" />
+<meta itemprop="dateModified" content="2020-04-09T16:40:28&#43;00:00" />
+<meta itemprop="wordCount" content="695">
+
+
+
+<meta itemprop="keywords" content="medical image,segmentation,miccai,paper review,fundus," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Paper Review - [2018MICCAI] Uniqueness-Driven Saliency Analysis for Automated Lesion Detection with Applications to Retinal Diseases"/>
+<meta name="twitter:description" content="General
+
+场景：眼底图像上的损伤检测
+技术上：
+
+根据显著性目标（saliency）总是相比背景具有独特性（uniqueness）的原理，从每个像素点的颜色和位置方面考虑，得到目标检测结果。
+unsupervised model / feature extractor
+
+
+lesion 分类：
+
+dark lesion：microaneurysms (MA)，Hemorrhages（HM）
+bright lesion：exudates (EX)，leakage (LK)
+
+
+这些特征主要影响 Diabetic retinopathy 和 malarial retinopathy 的诊断
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">ldihao&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">ldihao&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Paper Review - [2018MICCAI] Uniqueness-Driven Saliency Analysis for Automated Lesion Detection with Applications to Retinal Diseases</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-04-09 </span>
+        
+          <span class="more-meta"> 695 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#general">General</a></li>
+    <li><a href="#method">Method</a>
+      <ul>
+        <li><a href="#saliency-at-coarse-scale">Saliency at Coarse Scale</a></li>
+        <li><a href="#saliency-at-fine-scale">Saliency at Fine Scale</a></li>
+      </ul>
+    </li>
+    <li><a href="#experiment">Experiment</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="general">General</h1>
+<ul>
+<li>场景：眼底图像上的损伤检测</li>
+<li>技术上：
+<ul>
+<li>根据显著性目标（saliency）总是相比背景具有独特性（uniqueness）的原理，从每个像素点的颜色和位置方面考虑，得到目标检测结果。</li>
+<li>unsupervised model / feature extractor</li>
+</ul>
+</li>
+<li>lesion 分类：
+<ul>
+<li>dark lesion：microaneurysms (MA)，Hemorrhages（HM）</li>
+<li>bright lesion：exudates (EX)，leakage (LK)</li>
+</ul>
+</li>
+<li>这些特征主要影响 Diabetic retinopathy 和 malarial retinopathy 的诊断</li>
+</ul>
+<h1 id="method">Method</h1>
+<p>我们想找的部位（lesion）可以认为是该图像上的显著性目标，根据前面的定理，我们可以通过计算每一个pixel的uniqueness来找到这些部位，即我们认为背景是缺乏独特性的。</p>
+<p>如何定义这个uniqueness？</p>
+<p>文中提取每个pixel color 和 position 的特征，再从中计算。</p>
+<h2 id="saliency-at-coarse-scale">Saliency at Coarse Scale</h2>
+<p>为了减小计算量，将原本图像分辨率缩小在计算每一个 superpixel 的 uniqueness。</p>
+$$\mathbf{U}_{i}=\mathcal{I}_{i} \cdot \exp \left(-k \cdot \mathcal{D}_{i}\right)$$
+<p>前一部分代表这个点与附近点相比在颜色上的 uniqueness，计算方法为  color difference * position distance weight (based on Gaussian function)</p>
+$$\mathcal{I}_{j}=\sum_{i=1}^{N}\left\|\mathbf{c}_{i}-\mathbf{c}_{j}\right\|^{2} \cdot w^{I}\left(\mathbf{p}_{i}, \mathbf{p}_{j}\right)$$
+<p>同样的，我们也可以计算出，这个点与其他颜色相近的点相比，位置上的 uniqueness，计算方法为：</p>
+$$\mathcal{D}_{i}=\sum_{j=1}^{N}\left\|\mathbf{p}_{j}-\mu_{i}\right\|^{2} \cdot w^{D}\left(\mathbf{c}_{i}, \mathbf{c}_{j}\right)$$
+<p>其中我们需要先计算出这个点的 weighted mean position。</p>
+<p>这样，我们就能得到每个点的 uniqueness，即每个点可能是目标的概率。</p>
+<h2 id="saliency-at-fine-scale">Saliency at Fine Scale</h2>
+<p>现在需要再得到更精细的结果。</p>
+<p>我们认为目标点的uniqueness为其他所有点的加权 uniqueness 和。从color和position两个角度考虑权重大小，直觉上来说，color相近、position相近的点之间uniqueness也会相近，所以权重就是根据这个距离计算的。</p>
+$$S_{u}=\sum_{v=1}^{M} w_{u v} \mathbf{U}_{v}$$
+$$w_{u v}=\frac{1}{Z_{u}} \exp \left(-\frac{1}{2} \alpha\left\|\mathbf{c}_{u}-\mathbf{c}_{v}\right\|^{2}&#43;\beta\left\|\mathbf{p}_{u}-\mathbf{p}_{v}\right\|^{2}\right)$$
+<h1 id="experiment">Experiment</h1>
+<p>我们这里得到的目标图，包含了 vessel disc-region 等，所以需要移除。</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ldihao</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-04-09
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/medical-image/">medical image</a>
+          <a href="/tags/segmentation/">segmentation</a>
+          <a href="/tags/miccai/">miccai</a>
+          <a href="/tags/paper-review/">paper review</a>
+          <a href="/tags/fundus/">fundus</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/2020/04/10/hexo2hugo/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Hexo2hugo</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/2020/04/01/pr-afnet/">
+            <span class="next-text nav-default">Paper review - [2018MICCAI] A Framework for Identifying Diabetic Retinopathy Based on Anti-noise Detection and Attention-Based Fusion</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:ldihao@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://ldihao.github.com" class="iconfont icon-github" title="github"></a>
+      <a href="http://weibo.com/luodihao" class="iconfont icon-weibo" title="weibo"></a>
+  <a href="https://ldihao.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ldihao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

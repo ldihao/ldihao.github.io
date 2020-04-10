@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>segmentation on ldihao&#39;s blog</title>
+    <link>https://ldihao.github.io/tags/segmentation/</link>
+    <description>Recent content in segmentation on ldihao&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 09 Apr 2020 16:40:28 +0000</lastBuildDate>
+    
+	<atom:link href="https://ldihao.github.io/tags/segmentation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Paper Review - [2018MICCAI] Uniqueness-Driven Saliency Analysis for Automated Lesion Detection with Applications to Retinal Diseases</title>
+      <link>https://ldihao.github.io/2020/04/09/pr-lesiondetectionbasedonsaliency/</link>
+      <pubDate>Thu, 09 Apr 2020 16:40:28 +0000</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/04/09/pr-lesiondetectionbasedonsaliency/</guid>
+      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;场景：眼底图像上的损伤检测&lt;/li&gt;
+&lt;li&gt;技术上：
+&lt;ul&gt;
+&lt;li&gt;根据显著性目标（saliency）总是相比背景具有独特性（uniqueness）的原理，从每个像素点的颜色和位置方面考虑，得到目标检测结果。&lt;/li&gt;
+&lt;li&gt;unsupervised model / feature extractor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;lesion 分类：
+&lt;ul&gt;
+&lt;li&gt;dark lesion：microaneurysms (MA)，Hemorrhages（HM）&lt;/li&gt;
+&lt;li&gt;bright lesion：exudates (EX)，leakage (LK)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;这些特征主要影响 Diabetic retinopathy 和 malarial retinopathy 的诊断&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Paper review - [2019MICCAI] Attention Guided Network for Retinal Image Segmentation</title>
+      <link>https://ldihao.github.io/2020/03/19/pr-agnet/</link>
+      <pubDate>Thu, 19 Mar 2020 16:38:30 +0000</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/03/19/pr-agnet/</guid>
+      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;use case: 图像切割&lt;/li&gt;
+&lt;li&gt;技术上：
+&lt;ul&gt;
+&lt;li&gt;M-Net：U-Net + multi-scale input + side-output loss&lt;/li&gt;
+&lt;li&gt;Attention Guided Block
+&lt;ul&gt;
+&lt;li&gt;Attention Guided Filter：基于线性模型，让模型学习到高一层的 context information，同时保持高分辨率&lt;/li&gt;
+&lt;li&gt;Attention Block：使用1*1*1 kernel 处理得到 attention feature map&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;应用：眼部血管分割、眼部视杯分割&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

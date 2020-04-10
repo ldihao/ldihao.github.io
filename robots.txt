@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://ldihao.github.io/sitemap.xml

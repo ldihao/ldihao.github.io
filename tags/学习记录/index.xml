@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>学习记录 on ldihao&#39;s blog</title>
+    <link>https://ldihao.github.io/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
+    <description>Recent content in 学习记录 on ldihao&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 03 Apr 2019 19:44:17 +0000</lastBuildDate>
+    
+	<atom:link href="https://ldihao.github.io/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Notes on ML-book</title>
+      <link>https://ldihao.github.io/2019/04/03/note-on-ml-book/</link>
+      <pubDate>Wed, 03 Apr 2019 19:44:17 +0000</pubDate>
+      
+      <guid>https://ldihao.github.io/2019/04/03/note-on-ml-book/</guid>
+      <description>Some notes when I first read through the machine learning book (watermelon book). 第一章 绪论 第二章 模型评估与选择 第四章 决策树 第五章 神经网络 第八章 集成学习 第十章 降维与度量学习 第十二章 计算学习理论 第十</description>
+    </item>
+    
+  </channel>
+</rss>

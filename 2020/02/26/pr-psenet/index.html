@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Paper review - [2020AAAI] PSENet Psoriasis Severity Evaluation Network - ldihao&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ldihao" /><meta name="description" content="General  use case: 牛皮癣严重级别评估 相比传统医师：节省时间、consistency 技术上：使用 score refine module （类似attention layer） 提取信息、使用 siamese structure 缓解数据量小的问题、同时结合了 segmentation （bounding box） 结果：3.25 -&amp;gt; 2.21 (MAE), 70.72% -&amp;gt; 77.87% (Pair Accurancy) " /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
+
+
+<link rel="canonical" href="https://ldihao.github.io/2020/02/26/pr-psenet/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Paper review - [2020AAAI] PSENet Psoriasis Severity Evaluation Network" />
+<meta property="og:description" content="General
+
+use case: 牛皮癣严重级别评估
+相比传统医师：节省时间、consistency
+技术上：使用 score refine module （类似attention layer） 提取信息、使用 siamese structure 缓解数据量小的问题、同时结合了 segmentation （bounding box）
+结果：3.25 -&gt; 2.21 (MAE), 70.72% -&gt; 77.87% (Pair Accurancy)
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ldihao.github.io/2020/02/26/pr-psenet/" />
+<meta property="article:published_time" content="2020-02-26T15:22:08+00:00" />
+<meta property="article:modified_time" content="2020-02-26T15:22:08+00:00" />
+<meta itemprop="name" content="Paper review - [2020AAAI] PSENet Psoriasis Severity Evaluation Network">
+<meta itemprop="description" content="General
+
+use case: 牛皮癣严重级别评估
+相比传统医师：节省时间、consistency
+技术上：使用 score refine module （类似attention layer） 提取信息、使用 siamese structure 缓解数据量小的问题、同时结合了 segmentation （bounding box）
+结果：3.25 -&gt; 2.21 (MAE), 70.72% -&gt; 77.87% (Pair Accurancy)
+">
+<meta itemprop="datePublished" content="2020-02-26T15:22:08&#43;00:00" />
+<meta itemprop="dateModified" content="2020-02-26T15:22:08&#43;00:00" />
+<meta itemprop="wordCount" content="672">
+
+
+
+<meta itemprop="keywords" content="medical image,deep learning,metrics learning,regression,paper review," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Paper review - [2020AAAI] PSENet Psoriasis Severity Evaluation Network"/>
+<meta name="twitter:description" content="General
+
+use case: 牛皮癣严重级别评估
+相比传统医师：节省时间、consistency
+技术上：使用 score refine module （类似attention layer） 提取信息、使用 siamese structure 缓解数据量小的问题、同时结合了 segmentation （bounding box）
+结果：3.25 -&gt; 2.21 (MAE), 70.72% -&gt; 77.87% (Pair Accurancy)
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">ldihao&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">ldihao&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Paper review - [2020AAAI] PSENet Psoriasis Severity Evaluation Network</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-02-26 </span>
+        
+          <span class="more-meta"> 672 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#general">General</a></li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#pasi-description">PASI Description</a></li>
+    <li><a href="#method">Method</a>
+      <ul>
+        <li><a href="#input">input</a></li>
+      </ul>
+    </li>
+    <li><a href="#loss">Loss</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="general">General</h1>
+<ul>
+<li>use case: 牛皮癣严重级别评估</li>
+<li>相比传统医师：节省时间、consistency</li>
+<li>技术上：使用 score refine module （类似attention layer） 提取信息、使用 siamese structure 缓解数据量小的问题、同时结合了 segmentation （bounding box）</li>
+<li>结果：3.25 -&gt; 2.21 (MAE), 70.72% -&gt; 77.87% (Pair Accurancy)</li>
+</ul>
+<h1 id="introduction">Introduction</h1>
+<p>Psoriasis Area and Severity Index (PASI) (range from 0 to 72)：</p>
+<ul>
+<li>the redness of erythema</li>
+<li>the thickness of induration</li>
+<li>the scaling of desquamation</li>
+<li>the lesion area ratio</li>
+</ul>
+<p>PSENet:</p>
+<ul>
+<li>Score refine module estimates skin lesion&rsquo;s:
+<ul>
+<li>sizes</li>
+<li>abnormality degree</li>
+</ul>
+</li>
+<li>siamese structure:
+<ul>
+<li>take two different images as an input sample and predict the difference between their severities</li>
+<li>results in N ∗ (N − 1)/2 pairs</li>
+</ul>
+</li>
+</ul>
+<h1 id="pasi-description">PASI Description</h1>
+<p>对于每一次诊断，由四个部位的图像（头部、躯干、上肢、下肢），分别得到四个分数，每个分数有三个评价指标（redness of erythema, thickness of induration, scaling of desquamation), 共 4*3=12 分，再乘上 proportion score （0-4），最后72分。每个部位再通过权重值（0.1，0.3，0.2，0.4）相加，得到最终0-72分。</p>
+<h1 id="method">Method</h1>
+<p><img src="/img/PR/PR-PSENet_framework.png" alt=""></p>
+<p>如图所示，PSENet 包含两个完全相同的 subnet（共享参数、结构）。从第二个 maxpooling 开始，分别使用 score refine module 得到该 feature map 的得分（此时分辨率为 100 ∗ 128, 50 ∗ 64, 25 ∗ 32, 13 ∗ 16 和 7 ∗ 8），最后使用 fc 得到结果（smooth L1 loss）。Siamese structure 将两个 subnet 的结果比较（manhanttan distance + smooth L1 loss）。</p>
+<p><img src="/img/PR/PR-PSENet_score-refine-module.png" alt=""></p>
+<p>Score refine module 包含两个部分，上半部分估计严重程度，下半部分估计损伤位置，最后相乘，再通过avg sum max得到三个结果，加权后得到最后结果。</p>
+<p>五个 score refine module 除了最后 avg sum max 的权重外，共享参数。</p>
+<h2 id="input">input</h2>
+<p>每次训练输入 2 images + 2 scores + 2 location maps。</p>
+<p>为了训练 score refine module 中的 location map，需要得到皮肤损伤的 ground truth。具体方法为，使用另一个 private dataset 训练出一个能得到皮肤损伤 bounding box 的网络，再通过 Gaussien kernel 得到权重图，再使用不同的 stride 得到各个 module 的 GT。</p>
+<h1 id="loss">Loss</h1>
+<ul>
+<li>Localization loss: focal loss</li>
+<li>Distance metric loss: manhattan distance + smooth L1 loss</li>
+<li>Regression loss: smooth L1 loss</li>
+</ul>
+<p>Overall loss function:</p>
+<p align='center'>
+<img src="/img/PR/PR-PSENet_loss-overall.png" width="300">
+</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ldihao</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-02-26
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/medical-image/">medical image</a>
+          <a href="/tags/deep-learning/">deep learning</a>
+          <a href="/tags/metrics-learning/">metrics learning</a>
+          <a href="/tags/regression/">regression</a>
+          <a href="/tags/paper-review/">paper review</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/2020/03/04/pr-explainationgan/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Paper review - [2020ICLR] Explanation By Progressive Exaggeration</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/2019/07/23/pr-svm/">
+            <span class="next-text nav-default">Paper Review - A Novel Twin Support-Vector Machine With Pinball Loss</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:ldihao@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://ldihao.github.com" class="iconfont icon-github" title="github"></a>
+      <a href="http://weibo.com/luodihao" class="iconfont icon-weibo" title="weibo"></a>
+  <a href="https://ldihao.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ldihao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

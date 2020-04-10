@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>attention on ldihao&#39;s blog</title>
+    <link>https://ldihao.github.io/tags/attention/</link>
+    <description>Recent content in attention on ldihao&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Apr 2020 11:41:04 +0000</lastBuildDate>
+    
+	<atom:link href="https://ldihao.github.io/tags/attention/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Paper review - [2018MICCAI] A Framework for Identifying Diabetic Retinopathy Based on Anti-noise Detection and Attention-Based Fusion</title>
+      <link>https://ldihao.github.io/2020/04/01/pr-afnet/</link>
+      <pubDate>Wed, 01 Apr 2020 11:41:04 +0000</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/04/01/pr-afnet/</guid>
+      <description>General 场景：Diabetic Retinopathy 多分类 技术上： lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotated samples 造成 noise 使用 center-sample detector 减少这些噪声的影响 使用 Attention fusion network 综合分割和fu</description>
+    </item>
+    
+  </channel>
+</rss>

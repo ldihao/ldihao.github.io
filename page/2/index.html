@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>ldihao&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ldihao" /><meta name="description" content="Ldihao&#39;s blog site." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
+
+
+<link rel="canonical" href="https://ldihao.github.io/" />
+  <link href="https://ldihao.github.io/index.xml" rel="alternate" type="application/rss+xml" title="ldihao&#39;s blog" />
+  <link href="https://ldihao.github.io/index.xml" rel="feed" type="application/rss+xml" title="ldihao&#39;s blog" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="ldihao&#39;s blog" />
+<meta property="og:description" content="Ldihao&#39;s blog site." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ldihao.github.io/" />
+<meta property="og:updated_time" content="2020-04-10T13:28:16+08:00" />
+<meta itemprop="name" content="ldihao&#39;s blog">
+<meta itemprop="description" content="Ldihao&#39;s blog site."><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ldihao&#39;s blog"/>
+<meta name="twitter:description" content="Ldihao&#39;s blog site."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">ldihao&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">ldihao&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/2020/03/04/pr-explainationgan/">Paper review - [2020ICLR] Explanation By Progressive Exaggeration</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-03-04 </span>
+      
+        <span class="more-meta"> 949 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h1 id="general">General</h1>
+<ul>
+<li>大背景：现在的深度学习虽然发展快，表现好，但缺乏解释性，难以用在一些高风险task上如医学图像诊断</li>
+<li>本文尝试基于GAN，利用本身的图片（real image），产生（generate）该图片对应的一系列后验概率逐渐抄相反方向变化的反例（counter-factually generated samples）。且该方法是模型独立的。</li>
+<li>问题：由于是基于GAN，通常需要的数据量较大（文中数据集200k+）</li>
+<li><a href="https://openreview.net/forum?id=H1xFWgrFPS">ICLR Open Review</a></li>
+</ul>
+    </div>
+    <div class="read-more">
+      <a href="/2020/03/04/pr-explainationgan/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/2020/02/26/pr-psenet/">Paper review - [2020AAAI] PSENet Psoriasis Severity Evaluation Network</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-02-26 </span>
+      
+        <span class="more-meta"> 672 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h1 id="general">General</h1>
+<ul>
+<li>use case: 牛皮癣严重级别评估</li>
+<li>相比传统医师：节省时间、consistency</li>
+<li>技术上：使用 score refine module （类似attention layer） 提取信息、使用 siamese structure 缓解数据量小的问题、同时结合了 segmentation （bounding box）</li>
+<li>结果：3.25 -&gt; 2.21 (MAE), 70.72% -&gt; 77.87% (Pair Accurancy)</li>
+</ul>
+    </div>
+    <div class="read-more">
+      <a href="/2020/02/26/pr-psenet/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/2019/07/23/pr-svm/">Paper Review - A Novel Twin Support-Vector Machine With Pinball Loss</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-07-23 </span>
+      
+        <span class="more-meta"> 342 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h1 id="general">General</h1>
+<ul>
+<li>Title: A Novel Twin Support-Vector Machine With Pinball Loss</li>
+<li>贡献：提出了 Pin-TSVM，将 Pinball Loss 运用在 TSVM 上，降低了其对噪声的敏感性</li>
+<li><a href="https://ieeexplore.ieee.org/document/7381657">https://ieeexplore.ieee.org/document/7381657</a></li>
+</ul>
+    </div>
+    <div class="read-more">
+      <a href="/2019/07/23/pr-svm/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/2019/07/23/pr-dt/">Paper Review - 一个 Gradient Boosting Decision Trees 的应用</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-07-23 </span>
+      
+        <span class="more-meta"> 329 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h1 id="general">General</h1>
+<ul>
+<li>Task: Identify and quantify the <strong>influential factors</strong> on incident clerance time</li>
+<li>贡献：使用GBDT预测解释事故清理时间，提出影响因子的计算方法</li>
+<li>不足：并未提出一个新的方法</li>
+<li>Tool: Decision tree, machine learning</li>
+<li>Journal: [B] IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS</li>
+<li>Cite: X. Ma, C. Ding, S. Luan, Y. Wang and Y. Wang, &ldquo;Prioritizing Influential Factors for Freeway Incident Clearance Time Prediction Using the Gradient Boosting Decision Trees Method,&rdquo; in IEEE Transactions on Intelligent Transportation Systems, vol. 18, no. 9, pp. 2303-2310, Sept. 2017.
+doi: 10.1109/TITS.2016.2635719</li>
+<li><a href="https://ieeexplore.ieee.org/document/7811191">https://ieeexplore.ieee.org/document/7811191</a></li>
+</ul>
+    </div>
+    <div class="read-more">
+      <a href="/2019/07/23/pr-dt/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/2019/04/03/note-on-ml-book/">Notes on ML-book</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-04-03 </span>
+      
+        <span class="more-meta"> 191 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Some notes when I first read through the machine learning book (watermelon book). 第一章 绪论 第二章 模型评估与选择 第四章 决策树 第五章 神经网络 第八章 集成学习 第十章 降维与度量学习 第十二章 计算学习理论 第十
+    </div>
+    <div class="read-more">
+      <a href="/2019/04/03/note-on-ml-book/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    </section>
+  
+  <nav class="pagination">
+    <a class="prev" href="/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text">Prev</span>
+      </a>
+    <a class="next" href="/page/3/">
+        <span class="next-text">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+  </nav>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:ldihao@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://ldihao.github.com" class="iconfont icon-github" title="github"></a>
+      <a href="http://weibo.com/luodihao" class="iconfont icon-weibo" title="weibo"></a>
+  <a href="https://ldihao.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ldihao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

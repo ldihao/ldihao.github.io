@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Paper review - [2018MICCAI] A Framework for Identifying Diabetic Retinopathy Based on Anti-noise Detection and Attention-Based Fusion - ldihao&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ldihao" /><meta name="description" content="General 场景：Diabetic Retinopathy 多分类 技术上： lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotated samples 造成 noise 使用 center-sample detector 减少这些噪声的影响 使用 Attention fusion network 综合分割和fu" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
+
+
+<link rel="canonical" href="https://ldihao.github.io/2020/04/01/pr-afnet/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Paper review - [2018MICCAI] A Framework for Identifying Diabetic Retinopathy Based on Anti-noise Detection and Attention-Based Fusion" />
+<meta property="og:description" content="General 场景：Diabetic Retinopathy 多分类 技术上： lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotated samples 造成 noise 使用 center-sample detector 减少这些噪声的影响 使用 Attention fusion network 综合分割和fu" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ldihao.github.io/2020/04/01/pr-afnet/" />
+<meta property="article:published_time" content="2020-04-01T11:41:04+00:00" />
+<meta property="article:modified_time" content="2020-04-01T11:41:04+00:00" />
+<meta itemprop="name" content="Paper review - [2018MICCAI] A Framework for Identifying Diabetic Retinopathy Based on Anti-noise Detection and Attention-Based Fusion">
+<meta itemprop="description" content="General 场景：Diabetic Retinopathy 多分类 技术上： lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotated samples 造成 noise 使用 center-sample detector 减少这些噪声的影响 使用 Attention fusion network 综合分割和fu">
+<meta itemprop="datePublished" content="2020-04-01T11:41:04&#43;00:00" />
+<meta itemprop="dateModified" content="2020-04-01T11:41:04&#43;00:00" />
+<meta itemprop="wordCount" content="608">
+
+
+
+<meta itemprop="keywords" content="medical image,deep learning,classification,attention,miccai,paper review,fundus," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Paper review - [2018MICCAI] A Framework for Identifying Diabetic Retinopathy Based on Anti-noise Detection and Attention-Based Fusion"/>
+<meta name="twitter:description" content="General 场景：Diabetic Retinopathy 多分类 技术上： lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotated samples 造成 noise 使用 center-sample detector 减少这些噪声的影响 使用 Attention fusion network 综合分割和fu"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">ldihao&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">ldihao&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Paper review - [2018MICCAI] A Framework for Identifying Diabetic Retinopathy Based on Anti-noise Detection and Attention-Based Fusion</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-04-01 </span>
+        
+          <span class="more-meta"> 608 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#general">General</a></li>
+    <li><a href="#method">Method</a>
+      <ul>
+        <li><a href="#center-sample-detector">Center-Sample Detector</a>
+          <ul>
+            <li><a href="#sample-clustering">Sample Clustering</a></li>
+            <li><a href="#noisy-sample-mining">Noisy Sample Mining</a></li>
+          </ul>
+        </li>
+        <li><a href="#attention-fusion-network">Attention Fusion Network</a></li>
+      </ul>
+    </li>
+    <li><a href="#experiments">Experiments</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="general">General</h1>
+<ul>
+<li>
+<p>场景：Diabetic Retinopathy 多分类</p>
+</li>
+<li>
+<p>技术上：</p>
+<ul>
+<li>lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotated samples 造成 noise</li>
+<li>使用 center-sample detector 减少这些噪声的影响</li>
+<li>使用 Attention fusion network 综合分割和fundus信息</li>
+</ul>
+</li>
+<li>
+<p>在两个公开数据集 EyePACS，Messidor和一个私有数据集上效果好</p>
+<!-- more -->
+</li>
+</ul>
+<h1 id="method">Method</h1>
+<p><img src="/img/PR/PR-AFNet-framework.png" alt=""></p>
+<p>总体分为分割和分类两部分。</p>
+<p>分割网络在 SSD 基础上增加 center-sample detector。通过降低 noise 的采样概率，减轻 unannotated sample 对结果的影响。</p>
+<p>AFN 使用 ResNet18 作为 feature extractor，提取出的 feature map 再用简单CNN网络得到 weight，最后乘上原有特征再 concat，得到最终 feature map。</p>
+<h2 id="center-sample-detector">Center-Sample Detector</h2>
+<p>SSD 网络：SSD采用CNN来直接进行检测，SSD提取了不同尺度的特征图来做检测。使用 multi-scale 作为输入，大尺度特征图（较靠前的特征图）可以用来检测小物体，而小尺度特征图（较靠后的特征图）用来检测大物体；另外，SSD采用了不同尺度和长宽比的先验框（Prior boxes, Default boxes，在Faster R-CNN中叫做锚，Anchors）。</p>
+<p><img src="/img/PR/PR-AFNet-SSD.jpg" alt=""></p>
+<p>本文在 detect header 之前加入了 center sample detector 来控制进入下一步的样本。</p>
+<p>在训练时，需要先 pretrain SSD 部分，再加上 sample clustering。</p>
+<h3 id="sample-clustering">Sample Clustering</h3>
+<p>使用 cluster 方法，将不同 deep feature 聚类，认为虽然没有标记但聚为一类的样本为 lesion 即 unannotated sample（nosie）。</p>
+<h3 id="noisy-sample-mining">Noisy Sample Mining</h3>
+<p>使用 down-weighting 来减少这部分样本的影响。具体使用 threshold rank 来处理这些样本的采样概率。</p>
+$$P\left(u_{i j}\right)=\left\{\begin{array}{ll} 0 &amp; 0 \lt r_{i j} \lt t_{l} \\ \left(\frac{r_{i j}-t_{l}}{t_{u}-t_{l}}\right)^{\gamma} &amp; t_{l} \leq r_{i j} \lt t_{u} \\ 1 &amp; r_{i j} \geq t_{u} \end{array}\right.$$
+<h2 id="attention-fusion-network">Attention Fusion Network</h2>
+<p>The attention network consists of a 3 × 3 Conv, a ReLU, a dropout, a 1 × 1 Conv, and a Sigmoid layer.</p>
+<p>The final output is produced by performing a softmax operation on f(i,j,c) to get the probabilities of all grades.</p>
+<h1 id="experiments">Experiments</h1>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ldihao</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-04-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/medical-image/">medical image</a>
+          <a href="/tags/deep-learning/">deep learning</a>
+          <a href="/tags/classification/">classification</a>
+          <a href="/tags/attention/">attention</a>
+          <a href="/tags/miccai/">miccai</a>
+          <a href="/tags/paper-review/">paper review</a>
+          <a href="/tags/fundus/">fundus</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/2020/04/09/pr-lesiondetectionbasedonsaliency/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Paper Review - [2018MICCAI] Uniqueness-Driven Saliency Analysis for Automated Lesion Detection with Applications to Retinal Diseases</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/2020/03/19/pr-agnet/">
+            <span class="next-text nav-default">Paper review - [2019MICCAI] Attention Guided Network for Retinal Image Segmentation</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:ldihao@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://ldihao.github.com" class="iconfont icon-github" title="github"></a>
+      <a href="http://weibo.com/luodihao" class="iconfont icon-weibo" title="weibo"></a>
+  <a href="https://ldihao.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ldihao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

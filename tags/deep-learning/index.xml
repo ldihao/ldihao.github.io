@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deep learning on ldihao&#39;s blog</title>
+    <link>https://ldihao.github.io/tags/deep-learning/</link>
+    <description>Recent content in deep learning on ldihao&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Apr 2020 11:41:04 +0000</lastBuildDate>
+    
+	<atom:link href="https://ldihao.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Paper review - [2018MICCAI] A Framework for Identifying Diabetic Retinopathy Based on Anti-noise Detection and Attention-Based Fusion</title>
+      <link>https://ldihao.github.io/2020/04/01/pr-afnet/</link>
+      <pubDate>Wed, 01 Apr 2020 11:41:04 +0000</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/04/01/pr-afnet/</guid>
+      <description>General 场景：Diabetic Retinopathy 多分类 技术上： lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotated samples 造成 noise 使用 center-sample detector 减少这些噪声的影响 使用 Attention fusion network 综合分割和fu</description>
+    </item>
+    
+    <item>
+      <title>Paper review - [2019MICCAI] Attention Guided Network for Retinal Image Segmentation</title>
+      <link>https://ldihao.github.io/2020/03/19/pr-agnet/</link>
+      <pubDate>Thu, 19 Mar 2020 16:38:30 +0000</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/03/19/pr-agnet/</guid>
+      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;use case: 图像切割&lt;/li&gt;
+&lt;li&gt;技术上：
+&lt;ul&gt;
+&lt;li&gt;M-Net：U-Net + multi-scale input + side-output loss&lt;/li&gt;
+&lt;li&gt;Attention Guided Block
+&lt;ul&gt;
+&lt;li&gt;Attention Guided Filter：基于线性模型，让模型学习到高一层的 context information，同时保持高分辨率&lt;/li&gt;
+&lt;li&gt;Attention Block：使用1*1*1 kernel 处理得到 attention feature map&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;应用：眼部血管分割、眼部视杯分割&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Paper review - [2019CVPR] Attention Based Glaucoma Detection: A Large-scale Database and CNN Model</title>
+      <link>https://ldihao.github.io/2020/03/10/pr-agcnn/</link>
+      <pubDate>Tue, 10 Mar 2020 17:19:33 +0000</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/03/10/pr-agcnn/</guid>
+      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;use case: 青光眼诊断&lt;/li&gt;
+&lt;li&gt;技术上：
+&lt;ul&gt;
+&lt;li&gt;由于普通的CNN会使用许多冗余信息，采取 attention 机制，将网络的注意力放在视杯区域&lt;/li&gt;
+&lt;li&gt;使用 multi-scale block 提取特征&lt;/li&gt;
+&lt;li&gt;使用 guided-BP 得到 visualization map&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;结果：89.7% -&amp;gt; 95.3%&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Paper review - [2020ICLR] Explanation By Progressive Exaggeration</title>
+      <link>https://ldihao.github.io/2020/03/04/pr-explainationgan/</link>
+      <pubDate>Wed, 04 Mar 2020 15:06:50 +0000</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/03/04/pr-explainationgan/</guid>
+      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;大背景：现在的深度学习虽然发展快，表现好，但缺乏解释性，难以用在一些高风险task上如医学图像诊断&lt;/li&gt;
+&lt;li&gt;本文尝试基于GAN，利用本身的图片（real image），产生（generate）该图片对应的一系列后验概率逐渐抄相反方向变化的反例（counter-factually generated samples）。且该方法是模型独立的。&lt;/li&gt;
+&lt;li&gt;问题：由于是基于GAN，通常需要的数据量较大（文中数据集200k+）&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://openreview.net/forum?id=H1xFWgrFPS&#34;&gt;ICLR Open Review&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Paper review - [2020AAAI] PSENet Psoriasis Severity Evaluation Network</title>
+      <link>https://ldihao.github.io/2020/02/26/pr-psenet/</link>
+      <pubDate>Wed, 26 Feb 2020 15:22:08 +0000</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/02/26/pr-psenet/</guid>
+      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;use case: 牛皮癣严重级别评估&lt;/li&gt;
+&lt;li&gt;相比传统医师：节省时间、consistency&lt;/li&gt;
+&lt;li&gt;技术上：使用 score refine module （类似attention layer） 提取信息、使用 siamese structure 缓解数据量小的问题、同时结合了 segmentation （bounding box）&lt;/li&gt;
+&lt;li&gt;结果：3.25 -&amp;gt; 2.21 (MAE), 70.72% -&amp;gt; 77.87% (Pair Accurancy)&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

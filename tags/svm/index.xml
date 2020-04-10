@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SVM on ldihao&#39;s blog</title>
+    <link>https://ldihao.github.io/tags/svm/</link>
+    <description>Recent content in SVM on ldihao&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 23 Jul 2019 22:36:05 +0000</lastBuildDate>
+    
+	<atom:link href="https://ldihao.github.io/tags/svm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Paper Review - A Novel Twin Support-Vector Machine With Pinball Loss</title>
+      <link>https://ldihao.github.io/2019/07/23/pr-svm/</link>
+      <pubDate>Tue, 23 Jul 2019 22:36:05 +0000</pubDate>
+      
+      <guid>https://ldihao.github.io/2019/07/23/pr-svm/</guid>
+      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Title: A Novel Twin Support-Vector Machine With Pinball Loss&lt;/li&gt;
+&lt;li&gt;贡献：提出了 Pin-TSVM，将 Pinball Loss 运用在 TSVM 上，降低了其对噪声的敏感性&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ieeexplore.ieee.org/document/7381657&#34;&gt;https://ieeexplore.ieee.org/document/7381657&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

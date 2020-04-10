@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>decision tree on ldihao&#39;s blog</title>
+    <link>https://ldihao.github.io/tags/decision-tree/</link>
+    <description>Recent content in decision tree on ldihao&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 23 Jul 2019 17:33:46 +0000</lastBuildDate>
+    
+	<atom:link href="https://ldihao.github.io/tags/decision-tree/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Paper Review - 一个 Gradient Boosting Decision Trees 的应用</title>
+      <link>https://ldihao.github.io/2019/07/23/pr-dt/</link>
+      <pubDate>Tue, 23 Jul 2019 17:33:46 +0000</pubDate>
+      
+      <guid>https://ldihao.github.io/2019/07/23/pr-dt/</guid>
+      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Task: Identify and quantify the &lt;strong&gt;influential factors&lt;/strong&gt; on incident clerance time&lt;/li&gt;
+&lt;li&gt;贡献：使用GBDT预测解释事故清理时间，提出影响因子的计算方法&lt;/li&gt;
+&lt;li&gt;不足：并未提出一个新的方法&lt;/li&gt;
+&lt;li&gt;Tool: Decision tree, machine learning&lt;/li&gt;
+&lt;li&gt;Journal: [B] IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS&lt;/li&gt;
+&lt;li&gt;Cite: X. Ma, C. Ding, S. Luan, Y. Wang and Y. Wang, &amp;ldquo;Prioritizing Influential Factors for Freeway Incident Clearance Time Prediction Using the Gradient Boosting Decision Trees Method,&amp;rdquo; in IEEE Transactions on Intelligent Transportation Systems, vol. 18, no. 9, pp. 2303-2310, Sept. 2017.
+doi: 10.1109/TITS.2016.2635719&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ieeexplore.ieee.org/document/7811191&#34;&gt;https://ieeexplore.ieee.org/document/7811191&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

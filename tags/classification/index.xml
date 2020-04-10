@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>classification on ldihao&#39;s blog</title>
+    <link>https://ldihao.github.io/tags/classification/</link>
+    <description>Recent content in classification on ldihao&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Apr 2020 11:41:04 +0000</lastBuildDate>
+    
+	<atom:link href="https://ldihao.github.io/tags/classification/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Paper review - [2018MICCAI] A Framework for Identifying Diabetic Retinopathy Based on Anti-noise Detection and Attention-Based Fusion</title>
+      <link>https://ldihao.github.io/2020/04/01/pr-afnet/</link>
+      <pubDate>Wed, 01 Apr 2020 11:41:04 +0000</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/04/01/pr-afnet/</guid>
+      <description>General 场景：Diabetic Retinopathy 多分类 技术上： lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotated samples 造成 noise 使用 center-sample detector 减少这些噪声的影响 使用 Attention fusion network 综合分割和fu</description>
+    </item>
+    
+    <item>
+      <title>Paper review - [2019CVPR] Attention Based Glaucoma Detection: A Large-scale Database and CNN Model</title>
+      <link>https://ldihao.github.io/2020/03/10/pr-agcnn/</link>
+      <pubDate>Tue, 10 Mar 2020 17:19:33 +0000</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/03/10/pr-agcnn/</guid>
+      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;use case: 青光眼诊断&lt;/li&gt;
+&lt;li&gt;技术上：
+&lt;ul&gt;
+&lt;li&gt;由于普通的CNN会使用许多冗余信息，采取 attention 机制，将网络的注意力放在视杯区域&lt;/li&gt;
+&lt;li&gt;使用 multi-scale block 提取特征&lt;/li&gt;
+&lt;li&gt;使用 guided-BP 得到 visualization map&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;结果：89.7% -&amp;gt; 95.3%&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

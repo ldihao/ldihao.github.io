@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GAN on ldihao&#39;s blog</title>
+    <link>https://ldihao.github.io/tags/gan/</link>
+    <description>Recent content in GAN on ldihao&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 04 Mar 2020 15:06:50 +0000</lastBuildDate>
+    
+	<atom:link href="https://ldihao.github.io/tags/gan/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Paper review - [2020ICLR] Explanation By Progressive Exaggeration</title>
+      <link>https://ldihao.github.io/2020/03/04/pr-explainationgan/</link>
+      <pubDate>Wed, 04 Mar 2020 15:06:50 +0000</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/03/04/pr-explainationgan/</guid>
+      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;大背景：现在的深度学习虽然发展快，表现好，但缺乏解释性，难以用在一些高风险task上如医学图像诊断&lt;/li&gt;
+&lt;li&gt;本文尝试基于GAN，利用本身的图片（real image），产生（generate）该图片对应的一系列后验概率逐渐抄相反方向变化的反例（counter-factually generated samples）。且该方法是模型独立的。&lt;/li&gt;
+&lt;li&gt;问题：由于是基于GAN，通常需要的数据量较大（文中数据集200k+）&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://openreview.net/forum?id=H1xFWgrFPS&#34;&gt;ICLR Open Review&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>日常 on ldihao&#39;s blog</title>
+    <link>https://ldihao.github.io/tags/%E6%97%A5%E5%B8%B8/</link>
+    <description>Recent content in 日常 on ldihao&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 03 Apr 2019 12:25:37 +0000</lastBuildDate>
+    
+	<atom:link href="https://ldihao.github.io/tags/%E6%97%A5%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用 Google Cloud API 将录音转文字</title>
+      <link>https://ldihao.github.io/2019/04/03/gcloud-voice-to-text/</link>
+      <pubDate>Wed, 03 Apr 2019 12:25:37 +0000</pubDate>
+      
+      <guid>https://ldihao.github.io/2019/04/03/gcloud-voice-to-text/</guid>
+      <description>&lt;p&gt;由于六月份报了法语 DELF B2 的考试，现在要开始复（yù）习法语。而对于我来说，最难的当然是口语和听力了。找了本题库来练习，但是听力文件却没有字幕（？？），所以只好自力更生，语音转文字了。&lt;/p&gt;
+&lt;p&gt;其实之前有找到过一个 shell tool &lt;a href=&#34;https://github.com/agermanidis/autosub&#34;&gt;&lt;em&gt;&lt;strong&gt;autosub&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt;， 它可以通过音频或视频文件，生成其对应的字幕文件。然而由于它使用的是旧版的 Google Cloud API，已经是不可用了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;Auto-generated subtitles for any video
+
+Autosub is a utility for automatic speech recognition and subtitle generation. It takes a video or an audio file as input, performs voice activity detection to find speech regions, makes parallel requests to Google Web Speech API to generate transcriptions for those regions, (optionally) translates them to a different language, and finally saves the resulting subtitles to disk.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;所以尝试使用 &lt;a href=&#34;https://cloud.google.com/speech-to-text/&#34;&gt;&lt;em&gt;&lt;strong&gt;Google Cloud Speech-to-Text&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt; 将语音转文字。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://ldihao.github.io/2019/04/03/hello-world/</link>
+      <pubDate>Wed, 03 Apr 2019 00:00:01 +0000</pubDate>
+      
+      <guid>https://ldihao.github.io/2019/04/03/hello-world/</guid>
+      <description>其实也没有完全想清楚这个 blog 拿来干嘛。但是在之前的学习过程中，有许多东西都是查了又忘，忘了又继续查，比如 vim 的用法，ssh key 的生成。当然，还有一</description>
+    </item>
+    
+  </channel>
+</rss>
