@@ -42,7 +42,18 @@
       <pubDate>Wed, 01 Apr 2020 11:41:04 +0000</pubDate>
       
       <guid>https://ldihao.github.io/2020/04/01/pr-afnet/</guid>
-      <description>General 场景：Diabetic Retinopathy 多分类 技术上： lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotated samples 造成 noise 使用 center-sample detector 减少这些噪声的影响 使用 Attention fusion network 综合分割和fu</description>
+      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;场景：Diabetic Retinopathy 多分类&lt;/li&gt;
+&lt;li&gt;技术上：
+&lt;ul&gt;
+&lt;li&gt;lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotated samples 造成 noise&lt;/li&gt;
+&lt;li&gt;使用 center-sample detector 减少这些噪声的影响&lt;/li&gt;
+&lt;li&gt;使用 Attention fusion network 综合分割和fundus信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在两个公开数据集 EyePACS，Messidor和一个私有数据集上效果好&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>

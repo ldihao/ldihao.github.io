@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Retinopathy on ldihao&#39;s blog</title>
+    <link>https://ldihao.github.io/tags/retinopathy/</link>
+    <description>Recent content in Retinopathy on ldihao&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 14 Apr 2020 15:01:51 +0800</lastBuildDate>
+    
+	<atom:link href="https://ldihao.github.io/tags/retinopathy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Paper Review - [2019CVPR] Collaborative Learning of Semi-Supervised Segmentation and Classification for Medical Images</title>
+      <link>https://ldihao.github.io/2020/04/14/pr-semi-supervised-lesion-seg-clf/</link>
+      <pubDate>Tue, 14 Apr 2020 15:01:51 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/04/14/pr-semi-supervised-lesion-seg-clf/</guid>
+      <description>&lt;p&gt;基于半监督的医学图像分割与疾病分类的协同学习研究。&lt;/p&gt;
+&lt;p&gt;本文使用半监督的方法训练眼部损伤图像的分割模型，同时结合 attention map 分类诊断 DR 严重程度。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

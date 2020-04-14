@@ -6,9 +6,19 @@
     <description>Recent content in Categories on ldihao&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Tue, 14 Apr 2020 15:01:51 +0800</lastBuildDate>
     
 	<atom:link href="https://ldihao.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Paper review</title>
+      <link>https://ldihao.github.io/categories/paper-review/</link>
+      <pubDate>Tue, 14 Apr 2020 15:01:51 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/categories/paper-review/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

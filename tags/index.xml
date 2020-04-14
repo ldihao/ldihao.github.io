@@ -6,10 +6,55 @@
     <description>Recent content in Tags on ldihao&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Apr 2020 16:40:28 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2020 15:01:51 +0800</lastBuildDate>
     
 	<atom:link href="https://ldihao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>classification</title>
+      <link>https://ldihao.github.io/tags/classification/</link>
+      <pubDate>Tue, 14 Apr 2020 15:01:51 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/tags/classification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>paper review</title>
+      <link>https://ldihao.github.io/tags/paper-review/</link>
+      <pubDate>Tue, 14 Apr 2020 15:01:51 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/tags/paper-review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Retinopathy</title>
+      <link>https://ldihao.github.io/tags/retinopathy/</link>
+      <pubDate>Tue, 14 Apr 2020 15:01:51 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/tags/retinopathy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>segmentation</title>
+      <link>https://ldihao.github.io/tags/segmentation/</link>
+      <pubDate>Tue, 14 Apr 2020 15:01:51 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/tags/segmentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Semi-supervised</title>
+      <link>https://ldihao.github.io/tags/semi-supervised/</link>
+      <pubDate>Tue, 14 Apr 2020 15:01:51 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/tags/semi-supervised/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>fundus</title>
@@ -39,38 +84,11 @@
     </item>
     
     <item>
-      <title>paper review</title>
-      <link>https://ldihao.github.io/tags/paper-review/</link>
-      <pubDate>Thu, 09 Apr 2020 16:40:28 +0000</pubDate>
-      
-      <guid>https://ldihao.github.io/tags/paper-review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>segmentation</title>
-      <link>https://ldihao.github.io/tags/segmentation/</link>
-      <pubDate>Thu, 09 Apr 2020 16:40:28 +0000</pubDate>
-      
-      <guid>https://ldihao.github.io/tags/segmentation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>attention</title>
       <link>https://ldihao.github.io/tags/attention/</link>
       <pubDate>Wed, 01 Apr 2020 11:41:04 +0000</pubDate>
       
       <guid>https://ldihao.github.io/tags/attention/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>classification</title>
-      <link>https://ldihao.github.io/tags/classification/</link>
-      <pubDate>Wed, 01 Apr 2020 11:41:04 +0000</pubDate>
-      
-      <guid>https://ldihao.github.io/tags/classification/</guid>
       <description></description>
     </item>
     
