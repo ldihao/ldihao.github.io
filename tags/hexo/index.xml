@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hexo on ldihao&#39;s blog</title>
+    <link>https://ldihao.github.io/tags/hexo/</link>
+    <description>Recent content in hexo on ldihao&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 10 Apr 2020 13:28:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://ldihao.github.io/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hexo2hugo</title>
+      <link>https://ldihao.github.io/2020/04/10/hexo2hugo/</link>
+      <pubDate>Fri, 10 Apr 2020 13:28:16 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/04/10/hexo2hugo/</guid>
+      <description>&lt;p&gt;由于在 hexo 上一直没有解决数学公式输入的问题，这次一不做二不休干脆换成速度更快的 hugo，并且把之前存在的一些问题一起解决。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -44,7 +44,7 @@
 <meta property="og:description" content="Ldihao&#39;s blog site." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ldihao.github.io/" />
-<meta property="og:updated_time" content="2020-04-14T15:01:51+08:00" />
+<meta property="og:updated_time" content="2020-04-17T12:09:53+08:00" />
 <meta itemprop="name" content="ldihao&#39;s blog">
 <meta itemprop="description" content="Ldihao&#39;s blog site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ldihao&#39;s blog"/>
@@ -111,10 +111,50 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/2020/03/19/pr-agnet/">Paper review - [2019MICCAI] Attention Guided Network for Retinal Image Segmentation</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-03-19 </span>
+      <div class="post-category">
+          <a href="/categories/paper-review/"> Paper review </a>
+          </div>
+        <span class="more-meta"> 403 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h1 id="general">General</h1>
+<ul>
+<li>use case: 图像切割</li>
+<li>技术上：
+<ul>
+<li>M-Net：U-Net + multi-scale input + side-output loss</li>
+<li>Attention Guided Block
+<ul>
+<li>Attention Guided Filter：基于线性模型，让模型学习到高一层的 context information，同时保持高分辨率</li>
+<li>Attention Block：使用1*1*1 kernel 处理得到 attention feature map</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>应用：眼部血管分割、眼部视杯分割</li>
+</ul>
+    </div>
+    <div class="read-more">
+      <a href="/2020/03/19/pr-agnet/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/2020/03/10/pr-agcnn/">Paper review - [2019CVPR] Attention Based Glaucoma Detection: A Large-scale Database and CNN Model</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2020-03-10 </span>
-      
+      <div class="post-category">
+          <a href="/categories/paper-review/"> Paper review </a>
+          </div>
         <span class="more-meta"> 572 words </span>
         <span class="more-meta"> 2 mins read </span>
     </div>
@@ -146,7 +186,9 @@
     <h1 class="post-title"><a class="post-link" href="/2020/03/04/pr-explainationgan/">Paper review - [2020ICLR] Explanation By Progressive Exaggeration</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2020-03-04 </span>
-      
+      <div class="post-category">
+          <a href="/categories/paper-review/"> Paper review </a>
+          </div>
         <span class="more-meta"> 949 words </span>
         <span class="more-meta"> 2 mins read </span>
     </div>
@@ -173,7 +215,9 @@
     <h1 class="post-title"><a class="post-link" href="/2020/02/26/pr-psenet/">Paper review - [2020AAAI] PSENet Psoriasis Severity Evaluation Network</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2020-02-26 </span>
-      
+      <div class="post-category">
+          <a href="/categories/paper-review/"> Paper review </a>
+          </div>
         <span class="more-meta"> 672 words </span>
         <span class="more-meta"> 2 mins read </span>
     </div>
@@ -200,7 +244,9 @@
     <h1 class="post-title"><a class="post-link" href="/2019/07/23/pr-svm/">Paper Review - A Novel Twin Support-Vector Machine With Pinball Loss</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2019-07-23 </span>
-      
+      <div class="post-category">
+          <a href="/categories/paper-review/"> Paper review </a>
+          </div>
         <span class="more-meta"> 342 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
@@ -217,37 +263,6 @@
     </div>
     <div class="read-more">
       <a href="/2019/07/23/pr-svm/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/2019/07/23/pr-dt/">Paper Review - 一个 Gradient Boosting Decision Trees 的应用</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-07-23 </span>
-      
-        <span class="more-meta"> 329 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <h1 id="general">General</h1>
-<ul>
-<li>Task: Identify and quantify the <strong>influential factors</strong> on incident clerance time</li>
-<li>贡献：使用GBDT预测解释事故清理时间，提出影响因子的计算方法</li>
-<li>不足：并未提出一个新的方法</li>
-<li>Tool: Decision tree, machine learning</li>
-<li>Journal: [B] IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS</li>
-<li>Cite: X. Ma, C. Ding, S. Luan, Y. Wang and Y. Wang, &ldquo;Prioritizing Influential Factors for Freeway Incident Clearance Time Prediction Using the Gradient Boosting Decision Trees Method,&rdquo; in IEEE Transactions on Intelligent Transportation Systems, vol. 18, no. 9, pp. 2303-2310, Sept. 2017.
-doi: 10.1109/TITS.2016.2635719</li>
-<li><a href="https://ieeexplore.ieee.org/document/7811191">https://ieeexplore.ieee.org/document/7811191</a></li>
-</ul>
-    </div>
-    <div class="read-more">
-      <a href="/2019/07/23/pr-dt/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

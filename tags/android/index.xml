@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android on ldihao&#39;s blog</title>
+    <link>https://ldihao.github.io/tags/android/</link>
+    <description>Recent content in android on ldihao&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 17 Apr 2020 12:09:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://ldihao.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Termux</title>
+      <link>https://ldihao.github.io/2020/04/17/termux/</link>
+      <pubDate>Fri, 17 Apr 2020 12:09:53 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/04/17/termux/</guid>
+      <description>这里记录一下在安卓上使用 Termux 时使用的教程和出现的一些问题。 基础知识 主要还是从这篇文章了解的 Termux 基本操作。 问题 其他设备无法使用 ssh 连接到手机 Pick ports higher than</description>
+    </item>
+    
+  </channel>
+</rss>
