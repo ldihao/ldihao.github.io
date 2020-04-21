@@ -6,10 +6,19 @@
     <description>Recent content in miccai on ldihao&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Apr 2020 16:40:28 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2020 09:58:48 +0800</lastBuildDate>
     
 	<atom:link href="https://ldihao.github.io/tags/miccai/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Paper Review - [2018MICCAI] ASDNet: Attention Based Semi-supervised Deep Networks for Medical Image Segmentation</title>
+      <link>https://ldihao.github.io/2020/04/21/pr-asdnet/</link>
+      <pubDate>Tue, 21 Apr 2020 09:58:48 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/04/21/pr-asdnet/</guid>
+      <description>&lt;p&gt;由于医学图像分割中，有像素级别标记的数据集较少，本文使用&lt;strong&gt;半监督学习&lt;/strong&gt;和&lt;strong&gt;对抗学习&lt;/strong&gt;的方法，将没有像素级别标记的数据加入训练，提高模型泛化能力。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Paper Review - [2018MICCAI] Uniqueness-Driven Saliency Analysis for Automated Lesion Detection with Applications to Retinal Diseases</title>

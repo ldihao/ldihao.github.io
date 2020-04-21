@@ -6,10 +6,55 @@
     <description>Recent content in Tags on ldihao&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Apr 2020 12:09:53 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2020 09:58:48 +0800</lastBuildDate>
     
 	<atom:link href="https://ldihao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>medical image</title>
+      <link>https://ldihao.github.io/tags/medical-image/</link>
+      <pubDate>Tue, 21 Apr 2020 09:58:48 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/tags/medical-image/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>miccai</title>
+      <link>https://ldihao.github.io/tags/miccai/</link>
+      <pubDate>Tue, 21 Apr 2020 09:58:48 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/tags/miccai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>paper review</title>
+      <link>https://ldihao.github.io/tags/paper-review/</link>
+      <pubDate>Tue, 21 Apr 2020 09:58:48 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/tags/paper-review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>segmentation</title>
+      <link>https://ldihao.github.io/tags/segmentation/</link>
+      <pubDate>Tue, 21 Apr 2020 09:58:48 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/tags/segmentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>semi-supervise</title>
+      <link>https://ldihao.github.io/tags/semi-supervise/</link>
+      <pubDate>Tue, 21 Apr 2020 09:58:48 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/tags/semi-supervise/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>android</title>
@@ -39,29 +84,11 @@
     </item>
     
     <item>
-      <title>paper review</title>
-      <link>https://ldihao.github.io/tags/paper-review/</link>
-      <pubDate>Tue, 14 Apr 2020 15:01:51 +0800</pubDate>
-      
-      <guid>https://ldihao.github.io/tags/paper-review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Retinopathy</title>
       <link>https://ldihao.github.io/tags/retinopathy/</link>
       <pubDate>Tue, 14 Apr 2020 15:01:51 +0800</pubDate>
       
       <guid>https://ldihao.github.io/tags/retinopathy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>segmentation</title>
-      <link>https://ldihao.github.io/tags/segmentation/</link>
-      <pubDate>Tue, 14 Apr 2020 15:01:51 +0800</pubDate>
-      
-      <guid>https://ldihao.github.io/tags/segmentation/</guid>
       <description></description>
     </item>
     
@@ -107,24 +134,6 @@
       <pubDate>Thu, 09 Apr 2020 16:40:28 +0000</pubDate>
       
       <guid>https://ldihao.github.io/tags/fundus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>medical image</title>
-      <link>https://ldihao.github.io/tags/medical-image/</link>
-      <pubDate>Thu, 09 Apr 2020 16:40:28 +0000</pubDate>
-      
-      <guid>https://ldihao.github.io/tags/medical-image/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>miccai</title>
-      <link>https://ldihao.github.io/tags/miccai/</link>
-      <pubDate>Thu, 09 Apr 2020 16:40:28 +0000</pubDate>
-      
-      <guid>https://ldihao.github.io/tags/miccai/</guid>
       <description></description>
     </item>
     

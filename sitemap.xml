@@ -2,35 +2,84 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ldihao.github.io/tags/android/</loc>
-    <lastmod>2020-04-17T12:09:53+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://ldihao.github.io/categories/</loc>
-    <lastmod>2020-04-17T12:09:53+08:00</lastmod>
+    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ldihao.github.io/</loc>
-    <lastmod>2020-04-17T12:09:53+08:00</lastmod>
+    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/tags/medical-image/</loc>
+    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/tags/miccai/</loc>
+    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/categories/paper-review/</loc>
+    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/tags/paper-review/</loc>
+    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/2020/04/21/pr-asdnet/</loc>
+    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ldihao.github.io/post/</loc>
-    <lastmod>2020-04-17T12:09:53+08:00</lastmod>
+    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/tags/segmentation/</loc>
+    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/tags/semi-supervise/</loc>
+    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ldihao.github.io/tags/</loc>
+    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/tags/android/</loc>
     <lastmod>2020-04-17T12:09:53+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -65,20 +114,6 @@
   </url>
   
   <url>
-    <loc>https://ldihao.github.io/categories/paper-review/</loc>
-    <lastmod>2020-04-14T15:01:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ldihao.github.io/tags/paper-review/</loc>
-    <lastmod>2020-04-14T15:01:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://ldihao.github.io/2020/04/14/pr-semi-supervised-lesion-seg-clf/</loc>
     <lastmod>2020-04-14T15:01:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -87,13 +122,6 @@
   
   <url>
     <loc>https://ldihao.github.io/tags/retinopathy/</loc>
-    <lastmod>2020-04-14T15:01:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ldihao.github.io/tags/segmentation/</loc>
     <lastmod>2020-04-14T15:01:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -136,20 +164,6 @@
   
   <url>
     <loc>https://ldihao.github.io/tags/fundus/</loc>
-    <lastmod>2020-04-09T16:40:28+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ldihao.github.io/tags/medical-image/</loc>
-    <lastmod>2020-04-09T16:40:28+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ldihao.github.io/tags/miccai/</loc>
     <lastmod>2020-04-09T16:40:28+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
