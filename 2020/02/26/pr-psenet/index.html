@@ -16,7 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ldihao" /><meta name="description" content="General  use case: 牛皮癣严重级别评估 相比传统医师：节省时间、consistency 技术上：使用 score refine module （类似attention layer） 提取信息、使用 siamese structure 缓解数据量小的问题、同时结合了 segmentation （bounding box） 结果：3.25 -&amp;gt; 2.21 (MAE), 70.72% -&amp;gt; 77.87% (Pair Accurancy) " /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="ldihao" /><meta name="description" content="本文分别对深度学习模型每个层次的特征图进行牛皮癣位置和严重程度的预测，使用分割的损失函数使模型注意力集中在病理位置，提高疾病诊断准确性。
+General  use case: 牛皮癣严重级别评估 相比传统医师：节省时间、consistency 技术上：使用 score refine module （类似attention layer） 提取信息、使用 siamese structure 缓解数据量小的问题、同时结合了 segmentation （bounding box） 结果：3.25 -&amp;gt; 2.21 (MAE), 70.72% -&amp;gt; 77.87% (Pair Accurancy) " /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -39,7 +40,8 @@
 
 
 <meta property="og:title" content="Paper review - [2020AAAI] PSENet Psoriasis Severity Evaluation Network" />
-<meta property="og:description" content="General
+<meta property="og:description" content="本文分别对深度学习模型每个层次的特征图进行牛皮癣位置和严重程度的预测，使用分割的损失函数使模型注意力集中在病理位置，提高疾病诊断准确性。
+General
 
 use case: 牛皮癣严重级别评估
 相比传统医师：节省时间、consistency
@@ -51,7 +53,8 @@ use case: 牛皮癣严重级别评估
 <meta property="article:published_time" content="2020-02-26T15:22:08+00:00" />
 <meta property="article:modified_time" content="2020-02-26T15:22:08+00:00" />
 <meta itemprop="name" content="Paper review - [2020AAAI] PSENet Psoriasis Severity Evaluation Network">
-<meta itemprop="description" content="General
+<meta itemprop="description" content="本文分别对深度学习模型每个层次的特征图进行牛皮癣位置和严重程度的预测，使用分割的损失函数使模型注意力集中在病理位置，提高疾病诊断准确性。
+General
 
 use case: 牛皮癣严重级别评估
 相比传统医师：节省时间、consistency
@@ -60,13 +63,14 @@ use case: 牛皮癣严重级别评估
 ">
 <meta itemprop="datePublished" content="2020-02-26T15:22:08&#43;00:00" />
 <meta itemprop="dateModified" content="2020-02-26T15:22:08&#43;00:00" />
-<meta itemprop="wordCount" content="672">
+<meta itemprop="wordCount" content="740">
 
 
 
 <meta itemprop="keywords" content="medical image,deep learning,metrics learning,regression,paper review," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Paper review - [2020AAAI] PSENet Psoriasis Severity Evaluation Network"/>
-<meta name="twitter:description" content="General
+<meta name="twitter:description" content="本文分别对深度学习模型每个层次的特征图进行牛皮癣位置和严重程度的预测，使用分割的损失函数使模型注意力集中在病理位置，提高疾病诊断准确性。
+General
 
 use case: 牛皮癣严重级别评估
 相比传统医师：节省时间、consistency
@@ -142,7 +146,7 @@ use case: 牛皮癣严重级别评估
         <div class="post-category">
             <a href="/categories/paper-review/"> Paper review </a>
             </div>
-          <span class="more-meta"> 672 words </span>
+          <span class="more-meta"> 740 words </span>
           <span class="more-meta"> 2 mins read </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
@@ -167,7 +171,8 @@ use case: 牛皮癣严重级别评估
   </div>
 </div>
     <div class="post-content">
-      <h1 id="general">General</h1>
+      <p>本文分别对深度学习模型每个层次的特征图进行牛皮癣位置和严重程度的预测，使用分割的损失函数使模型注意力集中在病理位置，提高疾病诊断准确性。</p>
+<h1 id="general">General</h1>
 <ul>
 <li>use case: 牛皮癣严重级别评估</li>
 <li>相比传统医师：节省时间、consistency</li>

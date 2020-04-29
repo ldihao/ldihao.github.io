@@ -36,23 +36,7 @@
       <pubDate>Thu, 09 Apr 2020 16:40:28 +0000</pubDate>
       
       <guid>https://ldihao.github.io/2020/04/09/pr-lesiondetectionbasedonsaliency/</guid>
-      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;场景：眼底图像上的损伤检测&lt;/li&gt;
-&lt;li&gt;技术上：
-&lt;ul&gt;
-&lt;li&gt;根据显著性目标（saliency）总是相比背景具有独特性（uniqueness）的原理，从每个像素点的颜色和位置方面考虑，得到目标检测结果。&lt;/li&gt;
-&lt;li&gt;unsupervised model / feature extractor&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;lesion 分类：
-&lt;ul&gt;
-&lt;li&gt;dark lesion：microaneurysms (MA)，Hemorrhages（HM）&lt;/li&gt;
-&lt;li&gt;bright lesion：exudates (EX)，leakage (LK)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;这些特征主要影响 Diabetic retinopathy 和 malarial retinopathy 的诊断&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;本文根据损伤部位具有独特性的特点，对每个像素点的颜色和位置方面考虑，得到各自的独特性，由此分割出眼部损伤部位。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -61,18 +45,7 @@
       <pubDate>Wed, 01 Apr 2020 11:41:04 +0000</pubDate>
       
       <guid>https://ldihao.github.io/2020/04/01/pr-afnet/</guid>
-      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;场景：Diabetic Retinopathy 多分类&lt;/li&gt;
-&lt;li&gt;技术上：
-&lt;ul&gt;
-&lt;li&gt;lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotated samples 造成 noise&lt;/li&gt;
-&lt;li&gt;使用 center-sample detector 减少这些噪声的影响&lt;/li&gt;
-&lt;li&gt;使用 Attention fusion network 综合分割和fundus信息&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;在两个公开数据集 EyePACS，Messidor和一个私有数据集上效果好&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;本文尝试使用眼部损伤部位来诊断糖尿病性视网膜突变程度，针对损伤分割图不够精确的问题，使用采样的方法减少噪声的影响。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -81,22 +54,7 @@
       <pubDate>Thu, 19 Mar 2020 16:38:30 +0000</pubDate>
       
       <guid>https://ldihao.github.io/2020/03/19/pr-agnet/</guid>
-      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;use case: 图像切割&lt;/li&gt;
-&lt;li&gt;技术上：
-&lt;ul&gt;
-&lt;li&gt;M-Net：U-Net + multi-scale input + side-output loss&lt;/li&gt;
-&lt;li&gt;Attention Guided Block
-&lt;ul&gt;
-&lt;li&gt;Attention Guided Filter：基于线性模型，让模型学习到高一层的 context information，同时保持高分辨率&lt;/li&gt;
-&lt;li&gt;Attention Block：使用1*1*1 kernel 处理得到 attention feature map&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;应用：眼部血管分割、眼部视杯分割&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;本文在U-Net的基础上，在decoder部分，使用注意力机制将高层次的特征作为富含内容的信息与低层次的高分辨率的特征相结合，得到高分辨率同时含有内容信息的分割图像。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -105,18 +63,7 @@
       <pubDate>Tue, 10 Mar 2020 17:19:33 +0000</pubDate>
       
       <guid>https://ldihao.github.io/2020/03/10/pr-agcnn/</guid>
-      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;use case: 青光眼诊断&lt;/li&gt;
-&lt;li&gt;技术上：
-&lt;ul&gt;
-&lt;li&gt;由于普通的CNN会使用许多冗余信息，采取 attention 机制，将网络的注意力放在视杯区域&lt;/li&gt;
-&lt;li&gt;使用 multi-scale block 提取特征&lt;/li&gt;
-&lt;li&gt;使用 guided-BP 得到 visualization map&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;结果：89.7% -&amp;gt; 95.3%&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;该论文通过对专家诊断青光眼时对眼底图像区域的记录，将专家注意力图像作为特征进行预测，将得到的注意力图与全局图像点乘，再进入CNN得到最后的概率。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -125,13 +72,7 @@
       <pubDate>Wed, 04 Mar 2020 15:06:50 +0000</pubDate>
       
       <guid>https://ldihao.github.io/2020/03/04/pr-explainationgan/</guid>
-      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;大背景：现在的深度学习虽然发展快，表现好，但缺乏解释性，难以用在一些高风险task上如医学图像诊断&lt;/li&gt;
-&lt;li&gt;本文尝试基于GAN，利用本身的图片（real image），产生（generate）该图片对应的一系列后验概率逐渐抄相反方向变化的反例（counter-factually generated samples）。且该方法是模型独立的。&lt;/li&gt;
-&lt;li&gt;问题：由于是基于GAN，通常需要的数据量较大（文中数据集200k+）&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://openreview.net/forum?id=H1xFWgrFPS&#34;&gt;ICLR Open Review&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;本文使用GAN来尝试解释分析深度学习模型是从图像哪些部位进行分类的。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -140,7 +81,8 @@
       <pubDate>Wed, 26 Feb 2020 15:22:08 +0000</pubDate>
       
       <guid>https://ldihao.github.io/2020/02/26/pr-psenet/</guid>
-      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+      <description>&lt;p&gt;本文分别对深度学习模型每个层次的特征图进行牛皮癣位置和严重程度的预测，使用分割的损失函数使模型注意力集中在病理位置，提高疾病诊断准确性。&lt;/p&gt;
+&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;use case: 牛皮癣严重级别评估&lt;/li&gt;
 &lt;li&gt;相比传统医师：节省时间、consistency&lt;/li&gt;

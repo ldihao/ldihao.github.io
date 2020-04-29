@@ -17,7 +17,8 @@
       <pubDate>Wed, 26 Feb 2020 15:22:08 +0000</pubDate>
       
       <guid>https://ldihao.github.io/2020/02/26/pr-psenet/</guid>
-      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+      <description>&lt;p&gt;本文分别对深度学习模型每个层次的特征图进行牛皮癣位置和严重程度的预测，使用分割的损失函数使模型注意力集中在病理位置，提高疾病诊断准确性。&lt;/p&gt;
+&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;use case: 牛皮癣严重级别评估&lt;/li&gt;
 &lt;li&gt;相比传统医师：节省时间、consistency&lt;/li&gt;

@@ -17,13 +17,7 @@
       <pubDate>Wed, 04 Mar 2020 15:06:50 +0000</pubDate>
       
       <guid>https://ldihao.github.io/2020/03/04/pr-explainationgan/</guid>
-      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;大背景：现在的深度学习虽然发展快，表现好，但缺乏解释性，难以用在一些高风险task上如医学图像诊断&lt;/li&gt;
-&lt;li&gt;本文尝试基于GAN，利用本身的图片（real image），产生（generate）该图片对应的一系列后验概率逐渐抄相反方向变化的反例（counter-factually generated samples）。且该方法是模型独立的。&lt;/li&gt;
-&lt;li&gt;问题：由于是基于GAN，通常需要的数据量较大（文中数据集200k+）&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://openreview.net/forum?id=H1xFWgrFPS&#34;&gt;ICLR Open Review&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;本文使用GAN来尝试解释分析深度学习模型是从图像哪些部位进行分类的。&lt;/p&gt;</description>
     </item>
     
   </channel>

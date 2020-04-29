@@ -27,18 +27,7 @@
       <pubDate>Wed, 01 Apr 2020 11:41:04 +0000</pubDate>
       
       <guid>https://ldihao.github.io/2020/04/01/pr-afnet/</guid>
-      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;场景：Diabetic Retinopathy 多分类&lt;/li&gt;
-&lt;li&gt;技术上：
-&lt;ul&gt;
-&lt;li&gt;lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotated samples 造成 noise&lt;/li&gt;
-&lt;li&gt;使用 center-sample detector 减少这些噪声的影响&lt;/li&gt;
-&lt;li&gt;使用 Attention fusion network 综合分割和fundus信息&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;在两个公开数据集 EyePACS，Messidor和一个私有数据集上效果好&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;本文尝试使用眼部损伤部位来诊断糖尿病性视网膜突变程度，针对损伤分割图不够精确的问题，使用采样的方法减少噪声的影响。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -47,18 +36,7 @@
       <pubDate>Tue, 10 Mar 2020 17:19:33 +0000</pubDate>
       
       <guid>https://ldihao.github.io/2020/03/10/pr-agcnn/</guid>
-      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;use case: 青光眼诊断&lt;/li&gt;
-&lt;li&gt;技术上：
-&lt;ul&gt;
-&lt;li&gt;由于普通的CNN会使用许多冗余信息，采取 attention 机制，将网络的注意力放在视杯区域&lt;/li&gt;
-&lt;li&gt;使用 multi-scale block 提取特征&lt;/li&gt;
-&lt;li&gt;使用 guided-BP 得到 visualization map&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;结果：89.7% -&amp;gt; 95.3%&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;该论文通过对专家诊断青光眼时对眼底图像区域的记录，将专家注意力图像作为特征进行预测，将得到的注意力图与全局图像点乘，再进入CNN得到最后的概率。&lt;/p&gt;</description>
     </item>
     
   </channel>

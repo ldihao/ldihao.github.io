@@ -16,7 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ldihao" /><meta name="description" content="General  use case: 图像切割 技术上：  M-Net：U-Net &#43; multi-scale input &#43; side-output loss Attention Guided Block  Attention Guided Filter：基于线性模型，让模型学习到高一层的 context information，同时保持高分辨率 Attention Block：使用1*1*1 kernel 处理得到 attention feature map     应用：眼部血管分割、眼部视杯分割 " /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="ldihao" /><meta name="description" content="本文在U-Net的基础上，在decoder部分，使用注意力机制将高层次的特征作为富含内容的信息与低层次的高分辨率的特征相结合，得到高分辨率同时含有内容信息的分割图像。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -39,67 +40,22 @@
 
 
 <meta property="og:title" content="Paper review - [2019MICCAI] Attention Guided Network for Retinal Image Segmentation" />
-<meta property="og:description" content="General
-
-use case: 图像切割
-技术上：
-
-M-Net：U-Net &#43; multi-scale input &#43; side-output loss
-Attention Guided Block
-
-Attention Guided Filter：基于线性模型，让模型学习到高一层的 context information，同时保持高分辨率
-Attention Block：使用1*1*1 kernel 处理得到 attention feature map
-
-
-
-
-应用：眼部血管分割、眼部视杯分割
-" />
+<meta property="og:description" content="本文在U-Net的基础上，在decoder部分，使用注意力机制将高层次的特征作为富含内容的信息与低层次的高分辨率的特征相结合，得到高分辨率同时含有内容信息的分割图像。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ldihao.github.io/2020/03/19/pr-agnet/" />
 <meta property="article:published_time" content="2020-03-19T16:38:30+00:00" />
 <meta property="article:modified_time" content="2020-03-19T16:38:30+00:00" />
 <meta itemprop="name" content="Paper review - [2019MICCAI] Attention Guided Network for Retinal Image Segmentation">
-<meta itemprop="description" content="General
-
-use case: 图像切割
-技术上：
-
-M-Net：U-Net &#43; multi-scale input &#43; side-output loss
-Attention Guided Block
-
-Attention Guided Filter：基于线性模型，让模型学习到高一层的 context information，同时保持高分辨率
-Attention Block：使用1*1*1 kernel 处理得到 attention feature map
-
-
-
-
-应用：眼部血管分割、眼部视杯分割
-">
+<meta itemprop="description" content="本文在U-Net的基础上，在decoder部分，使用注意力机制将高层次的特征作为富含内容的信息与低层次的高分辨率的特征相结合，得到高分辨率同时含有内容信息的分割图像。">
 <meta itemprop="datePublished" content="2020-03-19T16:38:30&#43;00:00" />
 <meta itemprop="dateModified" content="2020-03-19T16:38:30&#43;00:00" />
-<meta itemprop="wordCount" content="403">
+<meta itemprop="wordCount" content="486">
 
 
 
 <meta itemprop="keywords" content="medical image,deep learning,segmentation,paper review," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Paper review - [2019MICCAI] Attention Guided Network for Retinal Image Segmentation"/>
-<meta name="twitter:description" content="General
-
-use case: 图像切割
-技术上：
-
-M-Net：U-Net &#43; multi-scale input &#43; side-output loss
-Attention Guided Block
-
-Attention Guided Filter：基于线性模型，让模型学习到高一层的 context information，同时保持高分辨率
-Attention Block：使用1*1*1 kernel 处理得到 attention feature map
-
-
-
-
-应用：眼部血管分割、眼部视杯分割
-"/>
+<meta name="twitter:description" content="本文在U-Net的基础上，在decoder部分，使用注意力机制将高层次的特征作为富含内容的信息与低层次的高分辨率的特征相结合，得到高分辨率同时含有内容信息的分割图像。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -169,7 +125,7 @@ Attention Block：使用1*1*1 kernel 处理得到 attention feature map
         <div class="post-category">
             <a href="/categories/paper-review/"> Paper review </a>
             </div>
-          <span class="more-meta"> 403 words </span>
+          <span class="more-meta"> 486 words </span>
           <span class="more-meta"> 1 min read </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
@@ -188,7 +144,8 @@ Attention Block：使用1*1*1 kernel 处理得到 attention feature map
   </div>
 </div>
     <div class="post-content">
-      <h1 id="general">General</h1>
+      <p>本文在U-Net的基础上，在decoder部分，使用注意力机制将高层次的特征作为富含内容的信息与低层次的高分辨率的特征相结合，得到高分辨率同时含有内容信息的分割图像。</p>
+<h1 id="general">General</h1>
 <ul>
 <li>use case: 图像切割</li>
 <li>技术上：

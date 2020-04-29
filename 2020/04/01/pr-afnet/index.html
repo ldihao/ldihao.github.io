@@ -16,7 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ldihao" /><meta name="description" content="General  场景：Diabetic Retinopathy 多分类 技术上：  lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotated samples 造成 noise 使用 center-sample detector 减少这些噪声的影响 使用 Attention fusion network 综合分割和fundus信息   在两个公开数据集 EyePACS，Messidor和一个私有数据集上效果好 " /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="ldihao" /><meta name="description" content="本文尝试使用眼部损伤部位来诊断糖尿病性视网膜突变程度，针对损伤分割图不够精确的问题，使用采样的方法减少噪声的影响。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -39,55 +40,22 @@
 
 
 <meta property="og:title" content="Paper review - [2018MICCAI] A Framework for Identifying Diabetic Retinopathy Based on Anti-noise Detection and Attention-Based Fusion" />
-<meta property="og:description" content="General
-
-场景：Diabetic Retinopathy 多分类
-技术上：
-
-lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotated samples 造成 noise
-使用 center-sample detector 减少这些噪声的影响
-使用 Attention fusion network 综合分割和fundus信息
-
-
-在两个公开数据集 EyePACS，Messidor和一个私有数据集上效果好
-" />
+<meta property="og:description" content="本文尝试使用眼部损伤部位来诊断糖尿病性视网膜突变程度，针对损伤分割图不够精确的问题，使用采样的方法减少噪声的影响。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ldihao.github.io/2020/04/01/pr-afnet/" />
 <meta property="article:published_time" content="2020-04-01T11:41:04+00:00" />
 <meta property="article:modified_time" content="2020-04-01T11:41:04+00:00" />
 <meta itemprop="name" content="Paper review - [2018MICCAI] A Framework for Identifying Diabetic Retinopathy Based on Anti-noise Detection and Attention-Based Fusion">
-<meta itemprop="description" content="General
-
-场景：Diabetic Retinopathy 多分类
-技术上：
-
-lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotated samples 造成 noise
-使用 center-sample detector 减少这些噪声的影响
-使用 Attention fusion network 综合分割和fundus信息
-
-
-在两个公开数据集 EyePACS，Messidor和一个私有数据集上效果好
-">
+<meta itemprop="description" content="本文尝试使用眼部损伤部位来诊断糖尿病性视网膜突变程度，针对损伤分割图不够精确的问题，使用采样的方法减少噪声的影响。">
 <meta itemprop="datePublished" content="2020-04-01T11:41:04&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-01T11:41:04&#43;00:00" />
-<meta itemprop="wordCount" content="608">
+<meta itemprop="wordCount" content="665">
 
 
 
 <meta itemprop="keywords" content="medical image,deep learning,classification,attention,miccai,paper review,fundus," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Paper review - [2018MICCAI] A Framework for Identifying Diabetic Retinopathy Based on Anti-noise Detection and Attention-Based Fusion"/>
-<meta name="twitter:description" content="General
-
-场景：Diabetic Retinopathy 多分类
-技术上：
-
-lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotated samples 造成 noise
-使用 center-sample detector 减少这些噪声的影响
-使用 Attention fusion network 综合分割和fundus信息
-
-
-在两个公开数据集 EyePACS，Messidor和一个私有数据集上效果好
-"/>
+<meta name="twitter:description" content="本文尝试使用眼部损伤部位来诊断糖尿病性视网膜突变程度，针对损伤分割图不够精确的问题，使用采样的方法减少噪声的影响。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -157,7 +125,7 @@ lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotat
         <div class="post-category">
             <a href="/categories/paper-review/"> Paper review </a>
             </div>
-          <span class="more-meta"> 608 words </span>
+          <span class="more-meta"> 665 words </span>
           <span class="more-meta"> 2 mins read </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
@@ -186,7 +154,8 @@ lesion 对 DR 识别有帮助，但许多 lesion 难以找到，存在 unannotat
   </div>
 </div>
     <div class="post-content">
-      <h1 id="general">General</h1>
+      <p>本文尝试使用眼部损伤部位来诊断糖尿病性视网膜突变程度，针对损伤分割图不够精确的问题，使用采样的方法减少噪声的影响。</p>
+<h1 id="general">General</h1>
 <ul>
 <li>场景：Diabetic Retinopathy 多分类</li>
 <li>技术上：

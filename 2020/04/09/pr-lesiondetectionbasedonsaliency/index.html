@@ -16,7 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ldihao" /><meta name="description" content="General  场景：眼底图像上的损伤检测 技术上：  根据显著性目标（saliency）总是相比背景具有独特性（uniqueness）的原理，从每个像素点的颜色和位置方面考虑，得到目标检测结果。 unsupervised model / feature extractor   lesion 分类：  dark lesion：microaneurysms (MA)，Hemorrhages（HM） bright lesion：exudates (EX)，leakage (LK)   这些特征主要影响 Diabetic retinopathy 和 malarial retinopathy 的诊断 " /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="ldihao" /><meta name="description" content="本文根据损伤部位具有独特性的特点，对每个像素点的颜色和位置方面考虑，得到各自的独特性，由此分割出眼部损伤部位。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -39,70 +40,22 @@
 
 
 <meta property="og:title" content="Paper Review - [2018MICCAI] Uniqueness-Driven Saliency Analysis for Automated Lesion Detection with Applications to Retinal Diseases" />
-<meta property="og:description" content="General
-
-场景：眼底图像上的损伤检测
-技术上：
-
-根据显著性目标（saliency）总是相比背景具有独特性（uniqueness）的原理，从每个像素点的颜色和位置方面考虑，得到目标检测结果。
-unsupervised model / feature extractor
-
-
-lesion 分类：
-
-dark lesion：microaneurysms (MA)，Hemorrhages（HM）
-bright lesion：exudates (EX)，leakage (LK)
-
-
-这些特征主要影响 Diabetic retinopathy 和 malarial retinopathy 的诊断
-" />
+<meta property="og:description" content="本文根据损伤部位具有独特性的特点，对每个像素点的颜色和位置方面考虑，得到各自的独特性，由此分割出眼部损伤部位。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ldihao.github.io/2020/04/09/pr-lesiondetectionbasedonsaliency/" />
 <meta property="article:published_time" content="2020-04-09T16:40:28+00:00" />
 <meta property="article:modified_time" content="2020-04-09T16:40:28+00:00" />
 <meta itemprop="name" content="Paper Review - [2018MICCAI] Uniqueness-Driven Saliency Analysis for Automated Lesion Detection with Applications to Retinal Diseases">
-<meta itemprop="description" content="General
-
-场景：眼底图像上的损伤检测
-技术上：
-
-根据显著性目标（saliency）总是相比背景具有独特性（uniqueness）的原理，从每个像素点的颜色和位置方面考虑，得到目标检测结果。
-unsupervised model / feature extractor
-
-
-lesion 分类：
-
-dark lesion：microaneurysms (MA)，Hemorrhages（HM）
-bright lesion：exudates (EX)，leakage (LK)
-
-
-这些特征主要影响 Diabetic retinopathy 和 malarial retinopathy 的诊断
-">
+<meta itemprop="description" content="本文根据损伤部位具有独特性的特点，对每个像素点的颜色和位置方面考虑，得到各自的独特性，由此分割出眼部损伤部位。">
 <meta itemprop="datePublished" content="2020-04-09T16:40:28&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-09T16:40:28&#43;00:00" />
-<meta itemprop="wordCount" content="695">
+<meta itemprop="wordCount" content="750">
 
 
 
 <meta itemprop="keywords" content="medical image,segmentation,miccai,paper review,fundus," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Paper Review - [2018MICCAI] Uniqueness-Driven Saliency Analysis for Automated Lesion Detection with Applications to Retinal Diseases"/>
-<meta name="twitter:description" content="General
-
-场景：眼底图像上的损伤检测
-技术上：
-
-根据显著性目标（saliency）总是相比背景具有独特性（uniqueness）的原理，从每个像素点的颜色和位置方面考虑，得到目标检测结果。
-unsupervised model / feature extractor
-
-
-lesion 分类：
-
-dark lesion：microaneurysms (MA)，Hemorrhages（HM）
-bright lesion：exudates (EX)，leakage (LK)
-
-
-这些特征主要影响 Diabetic retinopathy 和 malarial retinopathy 的诊断
-"/>
+<meta name="twitter:description" content="本文根据损伤部位具有独特性的特点，对每个像素点的颜色和位置方面考虑，得到各自的独特性，由此分割出眼部损伤部位。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -172,7 +125,7 @@ bright lesion：exudates (EX)，leakage (LK)
         <div class="post-category">
             <a href="/categories/paper-review/"> Paper review </a>
             </div>
-          <span class="more-meta"> 695 words </span>
+          <span class="more-meta"> 750 words </span>
           <span class="more-meta"> 2 mins read </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
@@ -196,7 +149,8 @@ bright lesion：exudates (EX)，leakage (LK)
   </div>
 </div>
     <div class="post-content">
-      <h1 id="general">General</h1>
+      <p>本文根据损伤部位具有独特性的特点，对每个像素点的颜色和位置方面考虑，得到各自的独特性，由此分割出眼部损伤部位。</p>
+<h1 id="general">General</h1>
 <ul>
 <li>场景：眼底图像上的损伤检测</li>
 <li>技术上：
