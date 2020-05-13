@@ -6,7 +6,7 @@
     <description>Recent content in Tags on ldihao&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 21 Apr 2020 09:58:48 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2020 14:32:12 +0800</lastBuildDate>
     
 	<atom:link href="https://ldihao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,27 @@
     <item>
       <title>medical image</title>
       <link>https://ldihao.github.io/tags/medical-image/</link>
-      <pubDate>Tue, 21 Apr 2020 09:58:48 +0800</pubDate>
+      <pubDate>Wed, 13 May 2020 14:32:12 +0800</pubDate>
       
       <guid>https://ldihao.github.io/tags/medical-image/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>paper review</title>
+      <link>https://ldihao.github.io/tags/paper-review/</link>
+      <pubDate>Wed, 13 May 2020 14:32:12 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/tags/paper-review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>X-ray</title>
+      <link>https://ldihao.github.io/tags/x-ray/</link>
+      <pubDate>Wed, 13 May 2020 14:32:12 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/tags/x-ray/</guid>
       <description></description>
     </item>
     
@@ -26,15 +44,6 @@
       <pubDate>Tue, 21 Apr 2020 09:58:48 +0800</pubDate>
       
       <guid>https://ldihao.github.io/tags/miccai/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>paper review</title>
-      <link>https://ldihao.github.io/tags/paper-review/</link>
-      <pubDate>Tue, 21 Apr 2020 09:58:48 +0800</pubDate>
-      
-      <guid>https://ldihao.github.io/tags/paper-review/</guid>
       <description></description>
     </item>
     

@@ -3,21 +3,63 @@
   
   <url>
     <loc>https://ldihao.github.io/categories/</loc>
-    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
+    <lastmod>2020-05-13T14:32:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ldihao.github.io/</loc>
-    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
+    <lastmod>2020-05-13T14:32:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ldihao.github.io/tags/medical-image/</loc>
-    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
+    <lastmod>2020-05-13T14:32:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/categories/paper-review/</loc>
+    <lastmod>2020-05-13T14:32:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/tags/paper-review/</loc>
+    <lastmod>2020-05-13T14:32:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/2020/05/13/pr-cianet/</loc>
+    <lastmod>2020-05-13T14:32:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/post/</loc>
+    <lastmod>2020-05-13T14:32:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/tags/</loc>
+    <lastmod>2020-05-13T14:32:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/tags/x-ray/</loc>
+    <lastmod>2020-05-13T14:32:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30,28 +72,7 @@
   </url>
   
   <url>
-    <loc>https://ldihao.github.io/categories/paper-review/</loc>
-    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ldihao.github.io/tags/paper-review/</loc>
-    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://ldihao.github.io/2020/04/21/pr-asdnet/</loc>
-    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ldihao.github.io/post/</loc>
     <lastmod>2020-04-21T09:58:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -66,13 +87,6 @@
   
   <url>
     <loc>https://ldihao.github.io/tags/semi-supervise/</loc>
-    <lastmod>2020-04-21T09:58:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ldihao.github.io/tags/</loc>
     <lastmod>2020-04-21T09:58:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

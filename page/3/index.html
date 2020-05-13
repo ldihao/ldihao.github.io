@@ -44,7 +44,7 @@
 <meta property="og:description" content="Ldihao&#39;s blog site." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ldihao.github.io/" />
-<meta property="og:updated_time" content="2020-04-21T09:58:48+08:00" />
+<meta property="og:updated_time" content="2020-05-13T14:32:12+08:00" />
 <meta itemprop="name" content="ldihao&#39;s blog">
 <meta itemprop="description" content="Ldihao&#39;s blog site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ldihao&#39;s blog"/>
@@ -109,6 +109,36 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/2020/02/26/pr-psenet/">Paper review - [2020AAAI] PSENet Psoriasis Severity Evaluation Network</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-02-26 </span>
+      <div class="post-category">
+          <a href="/categories/paper-review/"> Paper review </a>
+          </div>
+        <span class="more-meta"> 740 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>本文分别对深度学习模型每个层次的特征图进行牛皮癣位置和严重程度的预测，使用分割的损失函数使模型注意力集中在病理位置，提高疾病诊断准确性。</p>
+<h1 id="general">General</h1>
+<ul>
+<li>use case: 牛皮癣严重级别评估</li>
+<li>相比传统医师：节省时间、consistency</li>
+<li>技术上：使用 score refine module （类似attention layer） 提取信息、使用 siamese structure 缓解数据量小的问题、同时结合了 segmentation （bounding box）</li>
+<li>结果：3.25 -&gt; 2.21 (MAE), 70.72% -&gt; 77.87% (Pair Accurancy)</li>
+</ul>
+    </div>
+    <div class="read-more">
+      <a href="/2020/02/26/pr-psenet/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/2019/07/23/pr-svm/">Paper Review - A Novel Twin Support-Vector Machine With Pinball Loss</a></h1>
@@ -232,27 +262,6 @@ Autosub is a utility for automatic speech recognition and subtitle generation. I
   </div>
 </article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/2019/04/03/hello-world/">Hello World</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-04-03 </span>
-      
-        <span class="more-meta"> 144 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      其实也没有完全想清楚这个 blog 拿来干嘛。但是在之前的学习过程中，有许多东西都是查了又忘，忘了又继续查，比如 vim 的用法，ssh key 的生成。当然，还有一
-    </div>
-    <div class="read-more">
-      <a href="/2019/04/03/hello-world/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
     </section>
   
   <nav class="pagination">
@@ -260,7 +269,10 @@ Autosub is a utility for automatic speech recognition and subtitle generation. I
         <i class="iconfont icon-left"></i>
         <span class="prev-text">Prev</span>
       </a>
-    
+    <a class="next" href="/page/4/">
+        <span class="next-text">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
   </nav>
         </div>
         
