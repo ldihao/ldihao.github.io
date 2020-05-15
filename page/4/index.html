@@ -44,7 +44,7 @@
 <meta property="og:description" content="Ldihao&#39;s blog site." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ldihao.github.io/" />
-<meta property="og:updated_time" content="2020-05-13T14:32:12+08:00" />
+<meta property="og:updated_time" content="2020-05-15T10:11:45+08:00" />
 <meta itemprop="name" content="ldihao&#39;s blog">
 <meta itemprop="description" content="Ldihao&#39;s blog site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ldihao&#39;s blog"/>
@@ -109,6 +109,45 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/2019/04/03/gcloud-voice-to-text/">使用 Google Cloud API 将录音转文字</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-04-03 </span>
+      <div class="post-category">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"> 学习笔记 </a>
+          </div>
+        <span class="more-meta"> 415 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>由于六月份报了法语 DELF B2 的考试，现在要开始复（yù）习法语。而对于我来说，最难的当然是口语和听力了。找了本题库来练习，但是听力文件却没有字幕（？？），所以只好自力更生，语音转文字了。</p>
+<p>其实之前有找到过一个 shell tool <a href="https://github.com/agermanidis/autosub"><em><strong>autosub</strong></em></a>， 它可以通过音频或视频文件，生成其对应的字幕文件。然而由于它使用的是旧版的 Google Cloud API，已经是不可用了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Auto-generated subtitles for any video
+
+Autosub is a utility for automatic speech recognition and subtitle generation. It takes a video or an audio file as input, performs voice activity detection to find speech regions, makes parallel requests to Google Web Speech API to generate transcriptions for those regions, (optionally) translates them to a different language, and finally saves the resulting subtitles to disk.
+
+</code></pre></td></tr></table>
+</div>
+</div><p>所以尝试使用 <a href="https://cloud.google.com/speech-to-text/"><em><strong>Google Cloud Speech-to-Text</strong></em></a> 将语音转文字。</p>
+    </div>
+    <div class="read-more">
+      <a href="/2019/04/03/gcloud-voice-to-text/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/2019/04/03/hello-world/">Hello World</a></h1>
