@@ -3,21 +3,63 @@
   
   <url>
     <loc>https://ldihao.github.io/categories/</loc>
-    <lastmod>2020-05-15T10:11:45+08:00</lastmod>
+    <lastmod>2020-06-03T09:02:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/tags/classification/</loc>
+    <lastmod>2020-06-03T09:02:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/tags/deep-learning/</loc>
+    <lastmod>2020-06-03T09:02:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ldihao.github.io/</loc>
-    <lastmod>2020-05-15T10:11:45+08:00</lastmod>
+    <lastmod>2020-06-03T09:02:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ldihao.github.io/categories/paper-review/</loc>
-    <lastmod>2020-05-15T10:11:45+08:00</lastmod>
+    <lastmod>2020-06-03T09:02:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/2020/06/03/pr-resnext-sknet-resnest/</loc>
+    <lastmod>2020-06-03T09:02:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/post/</loc>
+    <lastmod>2020-06-03T09:02:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/tags/resnet/</loc>
+    <lastmod>2020-06-03T09:02:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/tags/</loc>
+    <lastmod>2020-06-03T09:02:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -31,20 +73,6 @@
   
   <url>
     <loc>https://ldihao.github.io/2020/05/15/pr-review-feb2may/</loc>
-    <lastmod>2020-05-15T10:11:45+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ldihao.github.io/post/</loc>
-    <lastmod>2020-05-15T10:11:45+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ldihao.github.io/tags/</loc>
     <lastmod>2020-05-15T10:11:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -128,13 +156,6 @@
   </url>
   
   <url>
-    <loc>https://ldihao.github.io/tags/classification/</loc>
-    <lastmod>2020-04-14T15:01:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://ldihao.github.io/2020/04/14/pr-semi-supervised-lesion-seg-clf/</loc>
     <lastmod>2020-04-14T15:01:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -199,13 +220,6 @@
   
   <url>
     <loc>https://ldihao.github.io/tags/attention/</loc>
-    <lastmod>2020-04-01T11:41:04+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ldihao.github.io/tags/deep-learning/</loc>
     <lastmod>2020-04-01T11:41:04+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

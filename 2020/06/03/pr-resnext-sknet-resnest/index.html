@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Paper Review - Review from Feb. to May. - ldihao&#39;s blog</title>
+  <title>Paper Review - ResNeXt / SKNet / ResNeSt - ldihao&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ldihao" /><meta name="description" content="总结一下从2月到5月看的9篇文章。
+<meta name="author" content="ldihao" /><meta name="description" content="这三篇论文在 ResNet 的基础上进行改进，加入 grouped conv、attention 的机制，在参数量几乎不变的条件下，模型的分类和分割结果提升。
 " /><meta name="keywords" content="Hugo, theme, even" />
 
 
@@ -27,7 +27,7 @@
 <meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
-<link rel="canonical" href="https://ldihao.github.io/2020/05/15/pr-review-feb2may/" />
+<link rel="canonical" href="https://ldihao.github.io/2020/06/03/pr-resnext-sknet-resnest/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,23 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Paper Review - Review from Feb. to May." />
-<meta property="og:description" content="总结一下从2月到5月看的9篇文章。" />
+<meta property="og:title" content="Paper Review - ResNeXt / SKNet / ResNeSt" />
+<meta property="og:description" content="这三篇论文在 ResNet 的基础上进行改进，加入 grouped conv、attention 的机制，在参数量几乎不变的条件下，模型的分类和分割结果提升。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ldihao.github.io/2020/05/15/pr-review-feb2may/" />
-<meta property="article:published_time" content="2020-05-15T10:11:45+08:00" />
-<meta property="article:modified_time" content="2020-05-15T10:11:45+08:00" />
-<meta itemprop="name" content="Paper Review - Review from Feb. to May.">
-<meta itemprop="description" content="总结一下从2月到5月看的9篇文章。">
-<meta itemprop="datePublished" content="2020-05-15T10:11:45&#43;08:00" />
-<meta itemprop="dateModified" content="2020-05-15T10:11:45&#43;08:00" />
-<meta itemprop="wordCount" content="649">
+<meta property="og:url" content="https://ldihao.github.io/2020/06/03/pr-resnext-sknet-resnest/" />
+<meta property="article:published_time" content="2020-06-03T09:02:41+08:00" />
+<meta property="article:modified_time" content="2020-06-03T09:02:41+08:00" />
+<meta itemprop="name" content="Paper Review - ResNeXt / SKNet / ResNeSt">
+<meta itemprop="description" content="这三篇论文在 ResNet 的基础上进行改进，加入 grouped conv、attention 的机制，在参数量几乎不变的条件下，模型的分类和分割结果提升。">
+<meta itemprop="datePublished" content="2020-06-03T09:02:41&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-03T09:02:41&#43;08:00" />
+<meta itemprop="wordCount" content="400">
 
 
 
-<meta itemprop="keywords" content="Paper review," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Paper Review - Review from Feb. to May."/>
-<meta name="twitter:description" content="总结一下从2月到5月看的9篇文章。"/>
+<meta itemprop="keywords" content="deep learning,classification,resnet," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Paper Review - ResNeXt / SKNet / ResNeSt"/>
+<meta name="twitter:description" content="这三篇论文在 ResNet 的基础上进行改进，加入 grouped conv、attention 的机制，在参数量几乎不变的条件下，模型的分类和分割结果提升。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -118,15 +118,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Paper Review - Review from Feb. to May.</h1>
+      <h1 class="post-title">Paper Review - ResNeXt / SKNet / ResNeSt</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2020-05-15 </span>
+        <span class="post-time"> 2020-06-03 </span>
         <div class="post-category">
             <a href="/categories/paper-review/"> Paper review </a>
             </div>
-          <span class="more-meta"> 649 words </span>
-          <span class="more-meta"> 2 mins read </span>
+          <span class="more-meta"> 400 words </span>
+          <span class="more-meta"> 1 min read </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
     </header>
@@ -136,104 +136,60 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#attention-map">Attention map</a></li>
+    <li><a href="#general">General</a></li>
+    <li><a href="#resnext">ResNeXt</a>
+      <ul>
+        <li><a href="#grouped-convolution">Grouped convolution</a></li>
+      </ul>
+    </li>
+    <li><a href="#sknet">SKNet</a></li>
+    <li><a href="#resnest">ResNeSt</a></li>
+    <li><a href="#experiment">Experiment</a></li>
+    <li><a href="#问题">问题</a></li>
   </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p>总结一下从2月到5月看的9篇文章。</p>
+      <p>这三篇论文在 ResNet 的基础上进行改进，加入 grouped conv、attention 的机制，在参数量几乎不变的条件下，模型的分类和分割结果提升。</p>
+<h1 id="general">General</h1>
 <ul>
-<li>Segmentation
+<li>场景：在ResNet的基础上改进模型</li>
+<li>贡献
 <ul>
-<li><a href="https://ldihao.github.io/2020/03/19/pr-agnet/">AG-Net</a>: 使用注意力机制+线性模型将高层次的特征作为富含内容的信息与低层次的高分辨率的特征相结合，得到高分辨率同时含有内容信息的分割图像。</li>
-<li><a href="https://ldihao.github.io/2020/04/09/pr-lesiondetectionbasedonsaliency/">Uniqueness-Driven Saliency Analysis</a>: 从特征提取角度，根据损伤部位具有独特性的特点，对每个像素点的<strong>颜色</strong>和<strong>位置</strong>方面考虑，得到各自的独特性，由此分割出眼部损伤部位。</li>
-<li><a href="https://ldihao.github.io/2020/04/21/pr-asdnet/">ASD-Net</a>: 使用半监督学习和对抗学习的方法，将没有像素级别标记的数据加入训练，提高分割模型泛化能力。</li>
+<li>ResNeXt：提出 grouped conv 概念，降低参数量</li>
+<li>SKNet：使用两种不同卷积核大小的卷积，有权重的融合</li>
+<li>ResNeSt：结合 grouped conv、channel-wise attention 和 SKNet 中不同卷积attention，提出 ResNeSt block</li>
 </ul>
 </li>
-<li>Classification
+<li>数据集
 <ul>
-<li><a href="https://ldihao.github.io/2020/02/26/pr-psenet/">PSE-Net</a>: 牛皮癣检测，分别对深度学习模型每个层次的特征图进行牛皮癣位置和严重程度的预测，使用分割的损失函数使模型注意力集中在病理位置，提高疾病诊断准确性。</li>
-<li><a href="https://ldihao.github.io/2020/03/10/pr-agcnn/">AG-CNN</a>: 利用专家注意力图的青光眼检测</li>
-<li><a href="https://ldihao.github.io/2020/04/01/pr-afnet/">AF-Net</a>: 使用眼部损伤部位来诊断糖尿病性视网膜突变程度，针对损伤分割图不够精确的问题，使用采样的方法减少噪声的影响</li>
-<li><a href="https://ldihao.github.io/2020/05/13/pr-cianet/">CIA-Net</a>: 正负样本特征图的差异度作为 attention map 的基础，结合设计的对齐模块来使不同样本对齐，以方便 location-wise 相减，达到了分类结果准确率提高。</li>
-</ul>
-</li>
-<li>Seg + Clf
-<ul>
-<li><a href="https://ldihao.github.io/2020/04/14/pr-semi-supervised-lesion-seg-clf/">CL-Net</a>: 使用半监督的方法训练眼部损伤图像的分割模型，同时结合 attention map 分类诊断 DR 严重程度。</li>
-</ul>
-</li>
-<li>其他
-<ul>
-<li><a href="https://ldihao.github.io/2020/03/04/pr-explainationgan/">Explanation By Progressive Exaggeration</a></li>
+<li>分类：ImageNet</li>
+<li>分割：MS-COCO</li>
 </ul>
 </li>
 </ul>
-<h1 id="attention-map">Attention map</h1>
-<table>
-<thead>
-<tr>
-<th align="center">模型</th>
-<th align="center">得到方法</th>
-<th align="center">处理方式</th>
-<th align="center">如何融合</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">AG-Net</td>
-<td align="center">高层次富含内容的信息</td>
-<td align="center">线性模型（低分辨率）</td>
-<td align="center">线性模型 upsampling 后作用在低层次高分辨率特征图上</td>
-</tr>
-<tr>
-<td align="center">ASD-Net</td>
-<td align="center">判别器的输出</td>
-<td align="center">不处理</td>
-<td align="center">与生成模型的结果相乘</td>
-</tr>
-<tr>
-<td align="center">:&ndash;:</td>
-<td align="center">:&ndash;:</td>
-<td align="center">:&ndash;:</td>
-<td align="center">:&ndash;:</td>
-</tr>
-<tr>
-<td align="center">PSE-Net</td>
-<td align="center">与GT拟合</td>
-<td align="center">不处理</td>
-<td align="center">与score map点乘</td>
-</tr>
-<tr>
-<td align="center">AG-CNN</td>
-<td align="center">专家的注意力图</td>
-<td align="center">训练输入为点乘处理后图像的分类网络，guided-BP算法，得到注意力图</td>
-<td align="center">与input点乘</td>
-</tr>
-<tr>
-<td align="center">AF-Net</td>
-<td align="center">特征图</td>
-<td align="center">attention network (conv3x3+conv1x1)</td>
-<td align="center">与特征图点乘</td>
-</tr>
-<tr>
-<td align="center">CIA-Net</td>
-<td align="center">正负样本特征图相减</td>
-<td align="center">normalization (sum=H*W)</td>
-<td align="center">与特征图相乘</td>
-</tr>
-<tr>
-<td align="center">CL-Net</td>
-<td align="center">切割模型</td>
-<td align="center">CNN</td>
-<td align="center">低层次（H*W）+高层次（1*1）点乘</td>
-</tr>
-</tbody>
-</table>
-<!-- # 总结
-
-progressive + bi-directional + multi-scale -->
+<h1 id="resnext">ResNeXt</h1>
+<h2 id="grouped-convolution">Grouped convolution</h2>
+<p><img src="/img/PR/PR-ResNeSt-ResNeXt-1.png" alt=""></p>
+<p>参数总量不变的情况下，channel数增加</p>
+<p><img src="/img/PR/PR-ResNeSt-ResNeXt-2.png" alt=""></p>
+<h1 id="sknet">SKNet</h1>
+<p><img src="/img/PR/PR-ResNeSt-SKNet.png" alt=""></p>
+<p>相比 ResNeXt 增加一个卷积+一个fc，参数量略微增大。</p>
+<p><img src="/img/PR/PR-ResNeSt-SKNet-result-1.png" alt="">
+<img src="/img/PR/PR-ResNeSt-SKNet-result-2.png" alt="">
+<img src="/img/PR/PR-ResNeSt-SKNet-result-3.png" alt=""></p>
+<p>随着输入图像中物体变大，模型更倾向选择卷积核大的卷积。</p>
+<h1 id="resnest">ResNeSt</h1>
+<p><img src="/img/PR/PR-ResNeSt-ResNeSt.png" alt=""></p>
+<p><img src="/img/PR/PR-ResNeSt-ResNeSt-SplitAttention.png" alt=""></p>
+<p>当 r=1 时，split-attention 退化为 SENet。</p>
+<h1 id="experiment">Experiment</h1>
+<h1 id="问题">问题</h1>
+<ul>
+<li>ResNeSt 中，同一个 cardinal block 里的 kernel size 可以不同？如果可以，那就和 SKNet 结构差不多？（attention位置从grouped conv后（SKNet）移到grouped conv中（ResNeSt））</li>
+</ul>
     </div>
 
     <div class="post-copyright">
@@ -244,7 +200,7 @@ progressive + bi-directional + multi-scale -->
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2020-05-15
+        2020-06-03
         
     </span>
   </p>
@@ -253,16 +209,14 @@ progressive + bi-directional + multi-scale -->
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/paper-review/">Paper review</a>
+          <a href="/tags/deep-learning/">deep learning</a>
+          <a href="/tags/classification/">classification</a>
+          <a href="/tags/resnet/">resnet</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/2020/06/03/pr-resnext-sknet-resnest/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Paper Review - ResNeXt / SKNet / ResNeSt</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/2020/05/13/pr-cianet/">
-            <span class="next-text nav-default">Paper Review - [2019ICCV] Align, Attend and Locate: Chest X-ray Diagnosis via Contrast Induced Attention Network with Limited Supervision</span>
+        
+        <a class="next" href="/2020/05/15/pr-review-feb2may/">
+            <span class="next-text nav-default">Paper Review - Review from Feb. to May.</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

@@ -6,10 +6,37 @@
     <description>Recent content in Tags on ldihao&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 May 2020 10:11:45 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2020 09:02:41 +0800</lastBuildDate>
     
 	<atom:link href="https://ldihao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>classification</title>
+      <link>https://ldihao.github.io/tags/classification/</link>
+      <pubDate>Wed, 03 Jun 2020 09:02:41 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/tags/classification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deep learning</title>
+      <link>https://ldihao.github.io/tags/deep-learning/</link>
+      <pubDate>Wed, 03 Jun 2020 09:02:41 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>resnet</title>
+      <link>https://ldihao.github.io/tags/resnet/</link>
+      <pubDate>Wed, 03 Jun 2020 09:02:41 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/tags/resnet/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>paper review</title>
@@ -84,15 +111,6 @@
     </item>
     
     <item>
-      <title>classification</title>
-      <link>https://ldihao.github.io/tags/classification/</link>
-      <pubDate>Tue, 14 Apr 2020 15:01:51 +0800</pubDate>
-      
-      <guid>https://ldihao.github.io/tags/classification/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Retinopathy</title>
       <link>https://ldihao.github.io/tags/retinopathy/</link>
       <pubDate>Tue, 14 Apr 2020 15:01:51 +0800</pubDate>
@@ -152,15 +170,6 @@
       <pubDate>Wed, 01 Apr 2020 11:41:04 +0000</pubDate>
       
       <guid>https://ldihao.github.io/tags/attention/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>deep learning</title>
-      <link>https://ldihao.github.io/tags/deep-learning/</link>
-      <pubDate>Wed, 01 Apr 2020 11:41:04 +0000</pubDate>
-      
-      <guid>https://ldihao.github.io/tags/deep-learning/</guid>
       <description></description>
     </item>
     

@@ -6,10 +6,19 @@
     <description>Recent content in Paper review on ldihao&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 May 2020 10:11:45 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2020 09:02:41 +0800</lastBuildDate>
     
 	<atom:link href="https://ldihao.github.io/categories/paper-review/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Paper Review - ResNeXt / SKNet / ResNeSt</title>
+      <link>https://ldihao.github.io/2020/06/03/pr-resnext-sknet-resnest/</link>
+      <pubDate>Wed, 03 Jun 2020 09:02:41 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/06/03/pr-resnext-sknet-resnest/</guid>
+      <description>&lt;p&gt;这三篇论文在 ResNet 的基础上进行改进，加入 grouped conv、attention 的机制，在参数量几乎不变的条件下，模型的分类和分割结果提升。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Paper Review - Review from Feb. to May.</title>
