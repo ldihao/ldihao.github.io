@@ -3,7 +3,49 @@
   
   <url>
     <loc>https://ldihao.github.io/categories/</loc>
-    <lastmod>2020-06-03T09:02:41+08:00</lastmod>
+    <lastmod>2020-06-24T17:21:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/</loc>
+    <lastmod>2020-06-24T17:21:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/categories/paper-review/</loc>
+    <lastmod>2020-06-24T17:21:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/tags/paper-review/</loc>
+    <lastmod>2020-06-24T17:21:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/2020/06/24/pr-canet/</loc>
+    <lastmod>2020-06-24T17:21:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/post/</loc>
+    <lastmod>2020-06-24T17:21:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ldihao.github.io/tags/</loc>
+    <lastmod>2020-06-24T17:21:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -23,28 +65,7 @@
   </url>
   
   <url>
-    <loc>https://ldihao.github.io/</loc>
-    <lastmod>2020-06-03T09:02:41+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ldihao.github.io/categories/paper-review/</loc>
-    <lastmod>2020-06-03T09:02:41+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://ldihao.github.io/2020/06/03/pr-resnext-sknet-resnest/</loc>
-    <lastmod>2020-06-03T09:02:41+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ldihao.github.io/post/</loc>
     <lastmod>2020-06-03T09:02:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -53,20 +74,6 @@
   <url>
     <loc>https://ldihao.github.io/tags/resnet/</loc>
     <lastmod>2020-06-03T09:02:41+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ldihao.github.io/tags/</loc>
-    <lastmod>2020-06-03T09:02:41+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ldihao.github.io/tags/paper-review/</loc>
-    <lastmod>2020-05-15T10:11:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
