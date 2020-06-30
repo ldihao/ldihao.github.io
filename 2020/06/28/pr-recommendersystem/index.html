@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Papers on Graph-related Algorithm of Recommender System - ldihao&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ldihao" /><meta name="description" content="" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
+
+
+<link rel="canonical" href="https://ldihao.github.io/2020/06/28/pr-recommendersystem/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Papers on Graph-related Algorithm of Recommender System" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ldihao.github.io/2020/06/28/pr-recommendersystem/" />
+<meta property="article:published_time" content="2020-06-28T10:01:03+08:00" />
+<meta property="article:modified_time" content="2020-06-28T10:01:03+08:00" />
+<meta itemprop="name" content="Papers on Graph-related Algorithm of Recommender System">
+<meta itemprop="description" content="">
+<meta itemprop="datePublished" content="2020-06-28T10:01:03&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-28T10:01:03&#43;08:00" />
+<meta itemprop="wordCount" content="2186">
+
+
+
+<meta itemprop="keywords" content="Paper review," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Papers on Graph-related Algorithm of Recommender System"/>
+<meta name="twitter:description" content=""/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">ldihao&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">ldihao&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Papers on Graph-related Algorithm of Recommender System</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-28 </span>
+        <div class="post-category">
+            <a href="/categories/paper-review/"> Paper review </a>
+            </div>
+          <span class="more-meta"> 2186 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#推荐系统">推荐系统</a></li>
+    <li><a href="#dnn">DNN</a>
+      <ul>
+        <li><a href="#fm---factorization-machines">FM - Factorization Machines</a>
+          <ul>
+            <li><a href="#fm-model">FM model</a>
+              <ul>
+                <li><a href="#pairwise-interactions">Pairwise interactions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#ffm---field-aware-factorization-machine">FFM - Field-aware Factorization Machine</a>
+          <ul>
+            <li><a href="#划分-field">划分 field</a></li>
+          </ul>
+        </li>
+        <li><a href="#deep-and-wide">Deep and Wide</a></li>
+        <li><a href="#deepfm">DeepFM</a></li>
+      </ul>
+    </li>
+    <li><a href="#gnn">GNN</a>
+      <ul>
+        <li><a href="#gcnn---graph-convolutional-network">GCNN - Graph Convolutional Network</a>
+          <ul>
+            <li><a href="#卷积层定义">卷积层定义</a></li>
+            <li><a href="#问题">问题</a></li>
+          </ul>
+        </li>
+        <li><a href="#graphsage">GraphSAGE</a>
+          <ul>
+            <li><a href="#loss-function">Loss function</a></li>
+            <li><a href="#aggregator-architectures">Aggregator Architectures</a></li>
+            <li><a href="#experiment">Experiment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#融合">融合</a>
+      <ul>
+        <li><a href="#bi-hgnn">Bi-HGNN</a></li>
+        <li><a href="#wd-gnn">WD-GNN</a>
+          <ul>
+            <li><a href="#algorithm">Algorithm</a></li>
+            <li><a href="#online-training">online training</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="推荐系统">推荐系统</h1>
+<ul>
+<li>场景
+<ul>
+<li>召回（millions） -&gt; 精排 （hundreds）</li>
+</ul>
+</li>
+<li>挑战
+<ul>
+<li>召回：处理数据量大、速度要快</li>
+<li>精排：模型要精准</li>
+</ul>
+</li>
+<li>精排
+<ul>
+<li>问题：sparse、特征之间的组合、与其他 user 之间的联系（graph-structure）</li>
+<li>DNN：主要使用了 node（user+item）的 feature，edge 的 feature/weight 可能在 FM 中的 latent vector 中学习到了一些（？）
+<ul>
+<li>FM</li>
+<li>DeepFM</li>
+<li>FFM</li>
+<li>Deep &amp; Wide</li>
+</ul>
+</li>
+<li>Graph
+<ul>
+<li>GraphSAGE</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="dnn">DNN</h1>
+<p>Problem:</p>
+<p><img src="/img/PR/PR-RS-DNN.png" alt=""></p>
+$D=\left\{\left(\mathbf{x}^{(1)}, y^{(1)}\right),\left(\mathbf{x}^{(2)}, y^{(2)}\right), \ldots\right\}$
+<p>$\underset{\omega}{\mathrm{argmin}} \quad {\mathbf{y}-f_{\omega}(\mathbf{x})}$</p>
+<ul>
+<li>sparsity: the number of zero elements in $\mathbf{x}$ &raquo; n</li>
+<li>#instance 通常非常大，需要分布式计算</li>
+<li>order-2 interaction 非常重要</li>
+</ul>
+<h2 id="fm---factorization-machines">FM - Factorization Machines</h2>
+<p>一种分类器，与 SVM、factorization models 相比：</p>
+<ul>
+<li>model all interactions between variables using factorized parameters (where SVM fails when facing sparse data)</li>
+<li>applicable to standard data ($\in \mathbb{R}^n$)</li>
+<li>be calculated in linear time</li>
+</ul>
+<h3 id="fm-model">FM model</h3>
+<ul>
+<li>
+<p>degree = 2 时：</p>
+<p>$\hat{y}(\mathbf{x}):=w_{0}+\sum_{i=1}^{n} w_{i} x_{i}+\sum_{i=1}^{n} \sum_{j=i+1}^{n}\left\langle\mathbf{v}_{i}, \mathbf{v}_{j}\right\rangle x_{i} x_{j}$</p>
+<p>$\text{where: } w_{0} \in \mathbb{R}, \quad \mathbf{w} \in \mathbb{R}^{n}, \quad \mathbf{V} \in \mathbb{R}^{n \times k} ,\quad \mathbf{x} \in \mathbb{R}^n$</p>
+<ul>
+<li>此时，FM 提取了所有的 single &amp; pairwise interactions</li>
+</ul>
+</li>
+</ul>
+<h4 id="pairwise-interactions">Pairwise interactions</h4>
+<ul>
+<li>
+<p>SVM with polynomial kernel：$\hat{y}(\mathbf{x}):=w_{0}+\sum_{i=1}^{n} w_{i} x_{i}+\sum_{i=1}^{n} \sum_{j=i+1}^{n}\mathbf{u}_{i,j} x_{i} x_{j}$</p>
+<p>$\text{where: } \mathbf{U} \in \mathbb{R}^{n\times n}$</p>
+</li>
+<li>
+<p>将 $\mathbf{U}$ 替换为 $\mathbf{V} \cdot \mathbf{V}^t$，根据定理，如果k足够大，$\mathbf{V} \cdot \mathbf{V}^t$ 可以表示任意正定矩阵。但为了模型泛化能力，一般 $k$ 较小。</p>
+</li>
+<li>
+<p>且由于不同词条（$\mathbf{x}^{(j)}$）的相同特征（$\mathbf{x}_i^{(j)}$）共享了同一个权重参数（$\mathbf{v}_i$）,在 sparse 特征下（dense data 下是否效果不会这么明显？），这个权重综合了所有词条的特征关系。</p>
+</li>
+</ul>
+<h2 id="ffm---field-aware-factorization-machine">FFM - Field-aware Factorization Machine</h2>
+<p>由于使用了 one-hot 编码再 concat 特征，不同类型特征之间的差异性被忽视。FFM 将 features 分到不同的 fields 中，同一 feature 对不同 field 中的 feature 使用不同 $\mathbf{v}_{j,f}$。</p>
+<p>$$
+\phi_{\mathrm{FFM}}(\boldsymbol{w}, \boldsymbol{x})=\sum_{j_{1}=1}^{n} \sum_{j_{2}=j_{1}+1}^{n}\left(\boldsymbol{w}_{j_{1}, f_{2}} \cdot \boldsymbol{w}_{j_{2}, f_{1}}\right) x_{j_{1}} x_{j_{2}}
+$$</p>
+<p>由于增加 field 信息，#variable = $nfk$， complexity = $O(n^2k)$，
+且 $k_{\mathrm{FFM}} \ll k_{\mathrm{FM}} (40 \to 4)$</p>
+<h3 id="划分-field">划分 field</h3>
+<ul>
+<li>Categorical
+<ul>
+<li>同一类别的划入同一 field</li>
+</ul>
+</li>
+<li>Numerical
+<ul>
+<li>each feature as a dummy field</li>
+<li>discretization</li>
+</ul>
+</li>
+<li>Single-field
+<ul>
+<li>assign one field to all words （？？把句子里的词都分开然后每个词作为一个one-hot feature？）</li>
+</ul>
+</li>
+</ul>
+<h2 id="deep-and-wide">Deep and Wide</h2>
+<p>对于一个推荐系统：</p>
+<ul>
+<li>Memorization: 从历史数据中找到 user 与 item 间的相关性 $\to$ wide model</li>
+<li>Generalization: 发现在历史数据中很少或者没有出现的新的特征组合 $\to$ deep model</li>
+</ul>
+<p>Deep and Wide: 两种模型并行计算，统一计算 loss，形成一个 end-to-end 的模型。</p>
+<p><img src="/img/PR/PR-RS-deepnwide.png" alt=""></p>
+<p>Prediction:</p>
+$$P(Y=1 \mid \mathbf{x})=\sigma\left(\mathbf{w}_{\text {wide}}^{T}[\mathbf{x}, \phi(\mathbf{x})]&#43;\mathbf{w}_{\text {deep}}^{T} a^{\left(l_{f}\right)}&#43;b\right)$$
+<p><strong>问题</strong>：</p>
+<ul>
+<li>embedding 的具体操作？（tf doc 里没写清楚？好像可以随着 training 变化）</li>
+<li>wide 部分没有使用 $\mathbf{x}$？只使用了 cross product？</li>
+</ul>
+<h2 id="deepfm">DeepFM</h2>
+<p>融合 FM（low-order）和 DNN（high-order），不需要手动 cross-product。</p>
+<p><img src="/img/PR/PR-RS-DeepFM.png" alt=""></p>
+<p>DNN 第一层直接使用 FM 中的 latent vector $\mathbf{V}$ 作为 dense embedding 参数。</p>
+<p>比较了其他 DNN 的结构：FNN、PNN、Wide &amp; Deep。</p>
+<p><img src="/img/PR/PR-RS-deepFM-comp.png" alt=""></p>
+<p>Experiment 中说 offline 一点点的提高（0.275%）可能导致 online gain 的巨大提高（3.9%）：可能由于 gain 随 auc 的变化并不是线性的。</p>
+<p><strong>问题</strong>：</p>
+<ul>
+<li>FM 部分是否使用 FFM？（图里似乎是使用了，正文中没有？）</li>
+</ul>
+<h1 id="gnn">GNN</h1>
+<p>同时使用 node feature 与 edge feature。</p>
+<p><strong>问题</strong>：</p>
+<ul>
+<li>在 graph 表示里，task 是什么？node（item 与 user）之间的权重？（recommendation problem on bipartite graphs/ matrix completion）</li>
+</ul>
+<h2 id="gcnn---graph-convolutional-network">GCNN - Graph Convolutional Network</h2>
+<p>Previous 问题（semi-supervised node classification task）定义：</p>
+$$\mathcal{L}=\mathcal{L}_{0}&#43;\lambda \mathcal{L}_{\mathrm{reg}}, \quad \text { with } \quad \mathcal{L}_{\mathrm{reg}}=\sum A_{i j}\left\|f\left(X_{i}\right)-f\left(X_{j}\right)\right\|^{2}=f(X)^{\top} \Delta f(X)$$
+<p>GCNN 将 graph structure 加入 model 的表达中，将 loss 简化为 $\mathcal{L}_{0}$。</p>
+<h3 id="卷积层定义">卷积层定义</h3>
+<p>$$
+H^{(l+1)}=\sigma\left(\tilde{D}^{-\frac{1}{2}} \tilde{A} \tilde{D}^{-\frac{1}{2}} H^{(l)} W^{(l)}\right) \text{ where: } \tilde{A}=A+I_{N}, \tilde{D}_{i i}=\sum_{j} \tilde{A}_{i j}
+$$</p>
+<p>with $W^{(l)} \in \mathbb{R}^{C \times F}, X \in \mathbb{R}^{N \times C}$</p>
+<p>思想：将 nodes 转换到由 graph structure 定义的 Fourier domain 中，使用 filter 过滤信息，再转换回原来空间中。</p>
+<h3 id="问题">问题</h3>
+<ul>
+<li>does not naturally support edge features and is limited to undirected graphs
+<ul>
+<li>possible to handle both directed edges and edge features by representing the original directed graph as an undirected bipartite graph with additional nodes that represent edges in the original graph</li>
+</ul>
+</li>
+</ul>
+<h2 id="graphsage">GraphSAGE</h2>
+<p>GCNN 的问题：</p>
+<ul>
+<li>Transductive：不能很好迁移到结构不同的图上</li>
+<li>矩阵计算量大</li>
+</ul>
+<p>GraphSAGE：</p>
+<ul>
+<li>spectral domain -&gt; spatial domain
+<ul>
+<li>重新定义卷积操作（aggregator functions (for neighbors) + concatenate）</li>
+</ul>
+</li>
+</ul>
+$$\mathbf{h}_{\mathcal{N}(v)}^{k} \leftarrow \operatorname{AGGREGATE}_{k}\left(\left\{\mathbf{h}_{u}^{k-1}, \forall u \in \mathcal{N}(v)\right\}\right) \\ \mathbf{h}_{v}^{k} \leftarrow \sigma\left(\mathbf{W}^{k} \cdot \operatorname{CONCAT}\left(\mathbf{h}_{v}^{k-1}, \mathbf{h}_{\mathcal{N}(v)}^{k}\right)\right)$$
+<p><strong>问题</strong>：</p>
+<ul>
+<li>每个 node 最后的 feature 最多只能综合距离最远为 K 的 node；link prediction 时最远 2K 的 node 可能有相同邻居？</li>
+</ul>
+<h3 id="loss-function">Loss function</h3>
+<p>unsupervised learning:</p>
+<p>$$
+J_{\mathcal{G}}\left(\mathbf{z}_{u}\right)=-\log \left(\sigma\left(\mathbf{z}_{u}^{\top} \mathbf{z}_{v}\right)\right)-Q \cdot \mathbb{E}_{v_{n} \sim P_{n}(v)} \log \left(\sigma\left(-\mathbf{z}_{u}^{\top} \mathbf{z}_{v_{n}}\right)\right)
+$$</p>
+<ul>
+<li>为什么不直接负采样 $u$ 节点？</li>
+<li>$Q$ 的意义和作用？</li>
+</ul>
+<h3 id="aggregator-architectures">Aggregator Architectures</h3>
+<ul>
+<li>GCN-variant</li>
+<li>mean</li>
+<li>LSTM</li>
+<li>max-pool</li>
+</ul>
+<h3 id="experiment">Experiment</h3>
+<p>$K = 2$ with neighborhood sample sizes $S_1 = 25$ and $S_2 = 10$</p>
+<p>感觉 $K$ 挺小？</p>
+<h1 id="融合">融合</h1>
+<p>并不是仅仅单纯为了融合 DNN 与 RNN，而都是为了解决实际任务中的某种问题。</p>
+<ul>
+<li>Hierarchical Representation Learning for Bipartite Graphs (Bi-HGNN)
+<ul>
+<li>embedding 时简单串型链接 Wide&amp;Deep 和 GraphSAGE，使用 space decomposition 考虑 community-aware information，将 user feature 分解为 individual 和 community feature 再 fc。</li>
+</ul>
+</li>
+<li>Wide and Deep Graph Neural Networks with Distributed Online Learning (WD-GNN)
+<ul>
+<li>为了解决 GNN 不能 online training，online learning 不能 distribute 的问题，融合线性模型和 GNN</li>
+</ul>
+</li>
+</ul>
+<h2 id="bi-hgnn">Bi-HGNN</h2>
+<ul>
+<li>场景
+<ul>
+<li>user item 推荐系统（二部图）</li>
+</ul>
+</li>
+<li>挑战
+<ul>
+<li>在 GNN 基础上使用 community-wise 信息</li>
+</ul>
+</li>
+<li>贡献
+<ul>
+<li>使用线性代数中 orthogonal base 分解的思想将 user feature 分解到 community feature space 和 individual user feature space 上</li>
+</ul>
+</li>
+<li>数据集
+<ul>
+<li>MovieLens dataset</li>
+<li>private e-commerce dataset</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/PR/PR-RS-BiHGNN-framework.png" alt=""></p>
+<ul>
+<li>首先使用 W&amp;D embedding node feature，再使用 GraphSage 融合图的结构特征，得到 Full Embedding。</li>
+<li>对 user embedding 分解，初始随机生成 community-wise base $\{e_k^{S}, k\in [\![1,N ]\!] \}$ 且 $dim({e_k^{S}})&lt;dim(e_u^{(F)})$，community-wise embedding 由 $e_u^{(F)}$ 和 $e_k^{S}$ 距离构成，individualized embedding 由分解得到。</li>
+<li>最后简单 concat 经过 mlp 得到最后结果。</li>
+</ul>
+<p><strong>问题</strong>：</p>
+<ul>
+<li>为什么 item feature embedding 时要使用 item-item edge？（using collaborative filtering algorithm）</li>
+</ul>
+<h2 id="wd-gnn">WD-GNN</h2>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="center">decentralized</th>
+<th align="center">robust to graph structure change (online optimization)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">GNN</td>
+<td align="center">$\surd$</td>
+<td align="center">$\times$</td>
+</tr>
+<tr>
+<td align="left">online learning</td>
+<td align="center">$\times$</td>
+<td align="center">$\surd$</td>
+</tr>
+<tr>
+<td align="left">WD-GNN</td>
+<td align="center">$\surd$</td>
+<td align="center">$\surd$ (to a degree)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="algorithm">Algorithm</h3>
+<p>$$
+\mathbf{\Psi}(\mathbf{X} ; \mathbf{S}, \mathcal{A}, \mathcal{B})=\alpha_{\mathrm{D}} \mathbf{\Phi}(\mathbf{X} ; \mathbf{S}, \mathcal{A})+\alpha_{\mathrm{W}} \mathbf{B}(\mathbf{X} ; \mathbf{S}, \mathcal{B})+\beta
+$$</p>
+<ul>
+<li>wide part - bank of linear graph filters (少了激活函数的 GNN)</li>
+</ul>
+<p>$$
+\mathbf{B}(\mathbf{X} ; \mathbf{S}, \mathcal{B})=\sum_{k=0}^{K} \mathbf{S}^{k} \mathbf{X} \mathbf{B}_{k}
+$$</p>
+<ul>
+<li>deep part - GNN</li>
+</ul>
+$$\mathbf{\Phi}(\mathbf{X} ; \mathbf{S}, \mathcal{A})=\mathbf{X}_{L} \quad \text { with } \quad \mathbf{X}_{\ell}=\sigma\left(\sum_{k=0}^{K} \mathbf{S}^{k} \mathbf{X}_{\ell-1} \mathbf{A}_{\ell k}\right)$$
+<h3 id="online-training">online training</h3>
+<ol>
+<li>train the model - both wide and deep part</li>
+<li>test - online training wide part (convexe)</li>
+</ol>
+<ul>
+<li>distribute online training</li>
+</ul>
+$$\mathcal{B}_{t&#43;1}=\mathcal{B}_{t}-\gamma_{t} \nabla_{\mathcal{B}} J_{t}\left(\boldsymbol{\Psi}\left(\mathbf{X}_{t} ; \mathbf{S}_{t}, \mathcal{A}^{\dagger}, \mathcal{B}\right)\right)$$
+<p>$$ \Downarrow $$</p>
+$$\mathcal{B}_{i, t&#43;1}=\frac{1}{\left|\mathcal{N}_{i}\right|&#43;1}\left(\sum_{j: n_{j} \in \mathcal{N}_{i}} \mathcal{B}_{j, t}&#43;\mathcal{B}_{i, t}\right)-\gamma_{t} \nabla_{\mathcal{B}} J_{i, t}\left(\mathbf{\Psi}\left(\mathbf{X}_{t} ; \mathbf{S}_{t}, \mathcal{A}^{\dagger}, \mathcal{B}_{i, t}\right)\right)$$
+<p>分解到每个 node 上分别计算 descent gradient，每轮计算后再 share。（有一定损失）</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ldihao</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-28
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/paper-review/">Paper review</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/2020/06/24/pr-canet/">
+            <span class="next-text nav-default">Paper Review - PR CANet</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:ldihao@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/ldihao" class="iconfont icon-github" title="github"></a>
+      <a href="http://weibo.com/luodihao" class="iconfont icon-weibo" title="weibo"></a>
+  <a href="https://ldihao.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">ldihao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

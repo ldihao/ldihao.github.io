@@ -6,10 +6,19 @@
     <description>Recent content in Posts on ldihao&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 24 Jun 2020 17:21:48 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2020 10:01:03 +0800</lastBuildDate>
     
 	<atom:link href="https://ldihao.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Papers on Graph-related Algorithm of Recommender System</title>
+      <link>https://ldihao.github.io/2020/06/28/pr-recommendersystem/</link>
+      <pubDate>Sun, 28 Jun 2020 10:01:03 +0800</pubDate>
+      
+      <guid>https://ldihao.github.io/2020/06/28/pr-recommendersystem/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Paper Review - PR CANet</title>
